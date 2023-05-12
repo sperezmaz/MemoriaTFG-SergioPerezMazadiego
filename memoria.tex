@@ -462,7 +462,7 @@ Se puede descargar compilado (archivos CSS y JavaScript) o a través del código
 \vspace{5mm}% DUDA: cursiva media queries?
 Destaca por la posibilidad de crear un diseño web responsive o adaptativo.
 Creando interfaces que se ajustan de manera automática a cualquier dispositivo, tamaño de pantalla y resolución.
-Mediante reglas media queries adapta la representación del contenido a características del dispositivo haciendo uso del sistema de rejillas (Grid System) de forma dinámica.
+Mediante reglas \textit{media queries} adapta la representación del contenido a características del dispositivo haciendo uso del sistema de rejillas (Grid System) de forma dinámica.
 El sistema de rejillas de Bootstrap utiliza una serie de contenedores, filas y columnas para diseñar y alinear el contenido de manera flexible.
 Las filas deben colocarse dentro de un contenedor para una alineación y un relleno adecuados, y cada fila puede hasta dividirse en doce columnas.
 
@@ -559,7 +559,7 @@ La plantilla (\emph{Template}) recibe los datos de la vista y luego los organiza
 \vspace{5mm}
 El algoritmo que se ha llevado a cabo para la realización de la función principal de la aplicación Dr.ScratchJr, que es analizar proyectos, comienza con la extracción de los datos.
 ScratchJr tiene la opción de compartir proyectos vía correo electrónico o AirDrop, lo que genera un archivo con extensión .sjr.
-Es a partir de este archivo SJR de donde partimos.
+De este archivo SJR es de donde partimos.
 Siendo este un archivo comprimido Zip que puede contener carpetas y archivos de recursos dependiendo de los elementos que se usen en la aplicación ScracthJr:
 
 \begin{itemize}
@@ -600,6 +600,7 @@ El procedimiento que se ha seguido para obtener los datos necesarios ha sido:
   \caption{Datos del JSON en la base de datos.}\label{fig:bd_json}
 \end{figure}
 
+\newpage
 % Algoritmo: Criterios
 \subsection{Criterios}
 \label{subsec:Criterios}
@@ -611,9 +612,12 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
     \item En el aspecto \emph{Variabilidad} se ha querido evaluar el uso de bloques en el proyecto, es decir la cantidad de bloques distintos que se han utilizado.
     Para ello se distinguen, como en la aplicación ScratchJr, cinco tipos de bloques: Eventos (figura~\ref{fig:evento}), Movimiento (figura~\ref{fig:movimiento}), Apariencia (figura~\ref{fig:apariencia}), Sonido (figura~\ref{fig:sonido}), Control (figura~\ref{fig:control}) y Finalización (figura~\ref{fig:finalizacion}).
     El algoritmo devuelve, para cada uno de los tipos, los bloques que se han empleado al menos una vez en todo el proyecto.
-    
+
+\vspace{5mm}
     En Dr.ScratchJr se ha tomado como la misma clase de bloque, como se puede observar en las figuras~\ref{fig:movimiento} y~\ref{fig:apariencia},  aquéllos que hacen la misma función pero de manera opuesta.
     Como es el caso de los bloques \emph{Girar a la derecha} y \emph{Girar a la izquierda}, \emph{Mover a la derecha} y \emph{Mover a la izquierda}, \emph{Subir} y \emph{Bajar}, \emph{Crecer} y \emph{Disminuir}, y \emph{Mostrar} y \emph{Ocultar}. 
+    
+\newpage
 
     \begin{figure}[H]
      \centering
@@ -646,6 +650,7 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
         \item \emph{dead\_code(adapted\_dict):} función que devuelve una lista con las secuencias de bloques que no comiencen con un bloque de Eventos.
         También están incluidas en la lista las secuencias que comienzan con el bloque ``Comenzar con mensaje'' de un color, pero solo cuando no aparece en el proyecto ningún bloque ``Enviar mensaje'' del mismo color, puesto que esa secuencia nunca se ejecutaría y debe ser considerado código muerto.
         
+        \vspace{5mm}
         Para ello, el algoritmo busca el primer bloque de cada secuencia y si no coincide con ninguno de los bloques de Eventos (figura~\ref{fig:evento}), se añade a la lista la secuencia junto con el personaje que la utilice y la página donde se encuentre.
         En el caso de coincidir el primer bloque de una secuencia con el bloque ``Comenzar con mensaje'' de un color, se busca en todas las secuencias de todo el proyecto si existe el bloque ``Enviar mensaje'' de ese mismo color, y si no se encuentra, se añade la secuencia a la lista del mismo modo que se ha comentado antes.
 
@@ -667,6 +672,7 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
 
     \item Para el criterio \emph{Creatividad} se busca si el usuario ha generado nuevo contenido respecto al contenido que proporciona la aplicación ScratchJr.
 
+    \vspace{5mm}
     El propio programa de ScratchJr aplica el algoritmo MD5 a sus archivos multimedia que tiene por defecto para saber si han sido modificadas.
     Los archivos que han sido modificados por el usuario son nombrados con 32 dígitos hexadecimales.
     Entonces el algoritmo de Dr.ScratchJr considera imágenes editadas o grabaciones de audio, aquellos cuyos archivos tienen un nombre con una longitud mayor a 30 caracteres.
@@ -706,38 +712,40 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
      \end{itemize}
 \end{itemize}
 
+\newpage
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=16cm, keepaspectratio]{img/entidad-relacion.png}
   \caption{Esquema entidad-relación de los criterios del análisis.}\label{fig:bd_criterios}
 \end{figure}
 
-
 % Algoritmo: proceso final
 
-\vspace{5mm}
 Una vez el algoritmo ha abstraído los datos para su análisis, se almacenan y se introducen en diccionarios que se utilizan como contexto para representar (renderizar) las plantillas que muestran los resultados del análisis.
 Estos diccionarios se almacenan igualmente en base de datos (figura~\ref{fig:bd_analisis}) de manera temporal para posteriormente utilizarlos también para renderizar las plantillas que muestran los detalles de un tipo de análisis en concreto.
 
+\newpage
 \begin{figure}[H]
   \centering
   \includegraphics[keepaspectratio]{img/bd_analisis.png}
   \caption{Tabla análisis en la base de datos.}\label{fig:bd_analisis}
 \end{figure}
 
-\vspace{5mm}
 El proceso para el análisis de múltiples proyectos es el mismo salvo que en lugar de representarse primero la plantilla del análisis de un proyecto, se renderiza una plantilla con un listado de los proyectos subidos junto al estudiante asociado a ese proyecto (figura~\ref{fig:listado_zip}).
 A partir de ese listado se puede ver el análisis de cada proyecto individualmente.
 
+\vspace{4mm}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=16cm, keepaspectratio]{img/listado_zip.png}
+  \includegraphics[width=13cm, keepaspectratio]{img/listado_zip.png}
   \caption{Ejemplo de un listado del análisis de un zip.}\label{fig:listado_zip}
 \end{figure}
 
 En cualquier listado con proyectos en la aplicación web Dr.ScratchJr existe la posibilidad de exportar los datos del análisis de los proyectos. 
 Al exportar se genera un zip, los datos se almacenan en tres ficheros CSV (badhabits-1, otherdata-1, variability-1) y en una hoja de cálculo de Microsoft Excel llamada data.xlsx con los mismos datos de los tres ficheros CSV, pero agrupados en pestañas en un solo documento.
 
+\vspace{5mm}
 Dr.ScratchJr dispone de la opción de cambiar a su pagina web el idioma a español o a inglés gracias al módulo gettext, disponible en Django, y creando los archivos de traducción para cada uno de los lenguajes.
 
 \section{Página web}
@@ -766,14 +774,12 @@ En el caso de haber iniciado sesión, también existe la opción de cambiarle el
 \end{figure}
 % 
 
-
+\newpage
 \subsection{Direcciones URLs de la aplicación}
 \label{subsec:Tabla de urls con sus vistas}
 
-
-La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las vistas que están asociadas a las URLs de la aplicación web Dr.ScratchJr.
-
     \begin{table}[H]
+     La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las vistas que están asociadas a las URLs de la aplicación web Dr.ScratchJr.
      \begin{center}
      \begin{tabular}{ | m{3.1cm} | m{3.3cm} | m{8.8cm} | }
       \hline \textbf{Path URL} & \textbf{Vista} & \textbf{Función}\\ \hline
@@ -996,7 +1002,7 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
     Además pinchando en la imagen se puede ver en tamaño completo en una pestaña nueva.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=15cm, keepaspectratio]{img/creatividad-detalles-personajes.PNG}
+        \includegraphics[width=11cm, keepaspectratio]{img/creatividad-detalles-personajes.PNG}
         \caption{Ejemplo detalles de personajes editados de la sección Creatividad.}
         \label{fig:personajes-editados-detalles}
     \end{figure}
@@ -1012,12 +1018,13 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
      \end{itemize}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=9cm, keepaspectratio]{img/otros_datos.PNG}
+        \includegraphics[width=11cm, keepaspectratio]{img/otros_datos.PNG}
         \caption{Ejemplo sección Otros datos.}
         \label{fig:otros_datos}
     \end{figure}
 \end{itemize}
 
+\newpage
 \subsection{Vista de listados}
 \label{subsec:Vista de listados}
 
@@ -1065,12 +1072,14 @@ Como ya se ha mencionado, al exportar se genera un zip que contiene tres fichero
 Para validar los distintos aspectos del análisis, se ha usado un proyecto de ejemplo llamado Test1.sjr cuyo contenido se presenta en la figura~\ref{fig:Test1}. 
 Para ello, seguimos todos los aspectos que incluye un análisis de Dr.ScratchJr y comprobamos que concuerdan los resultados del análisis con los esperados.
 
+\vspace{5mm}
 Test1.sjr posee un total de dos páginas, la primera con una imagen de fondo del interior del océano y la segunda con una imagen de una playa.
 La primera página contiene los personajes ``Buceador'' y dos ``Caballito de mar'' y la segunda los personajes ``Perro'' y ``Remero'', haciendo un total de 5 personajes en el proyecto. 
 Hay un texto ``Playa Blanca'' en la página 2, siendo el único texto del proyecto. 
 La primera página con una imagen de fondo del interior del océano no ha sido cambiada por el editor de ScratchJr y es de las que dispone el programa por defecto.
 Al igual ocurre con cuatro de los cinco personajes que tiene el proyecto, que son los que proporciona la aplicación y no han sido editados.
 
+\newpage
 \begin{figure}[H]
  \centering
   \subfloat[Buceador]{
@@ -1100,10 +1109,12 @@ En la figura~\ref{fig:otros_datos_Test1} confirmamos estos datos con los mostrad
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm, keepaspectratio]{img/otros_datos_Test1.png}
+  \includegraphics[width=14cm, keepaspectratio]{img/otros_datos_Test1.png}
   \caption{Otros datos del analisis de Test1.sjr.}
   \label{fig:otros_datos_Test1}
 \end{figure}
+
+\newpage
 
 \begin{figure}[H]
 Para validar el aspecto de Variabilidad hacemos un recuento de las ocasiones que aparece cada tipo de bloque en todo el proyecto (figura~\ref{fig:tabla_recuento}):\newline
@@ -1126,12 +1137,16 @@ Consideramos código muerto a secuencias de bloques que no se van a ejecutar en 
 En nuestro ejemplo Test1.sjr, hay una secuencia de bloques donde ocurre esto.
 En la figura~\ref{fig:caballito2} el personaje Caballito de mar posee una secuencia de bloques donde no se encuentra ningún bloque de evento, por lo tanto, no se va a realizar dicha secuencia y se considera que el proyecto contiene un \textit{Código muerto}.
 
+\vspace{5mm}
 Por el contrario, una secuencia de bloques que no acaba con un bloque de finalización se considera \textit{Código inacabado}. Es el caso que ocurre en una de las secuencias de la figura~\ref{fig:remero}.
 
+\vspace{5mm}
 En la figura~\ref{fig:caballito1}, aparecen dos bloques ``subir'' seguidos en una misma secuencia.
 Esto se considera un mal hábito de \textit{Secuencias con bloques adyacentes} porque ScratchJr posee ciertos bloques que disponen de un atributo que representa el número de veces que quieres que se realicen dichos bloques de forma consecutiva sin la necesidad de estar repitiéndolos en el programa.
 
+\vspace{5mm}
 Otro mal hábito es el uso de \textit{Personajes con mismo nombre en una página}. En la página 1 de Test1.sjr (figura~\ref{fig:Test1}) aparecen dos personajes con el nombre Caballito de mar, por lo que este nombre se encuentra en la página 1 en dos ocasiones.
+
 
 Los resultados del análisis del aspecto de Malos hábitos coinciden con lo esperado (figura~\ref{fig:maloshabitos_Test1}).
 
@@ -1159,6 +1174,7 @@ De tal manera el personaje ``Buceador'' ha sido editado cambiando de color los g
 
 En cuanto a sonidos creados, Test1.sjr contiene un bloque en la secuencia que tiene el personaje ``Perro'' de la página 2, con una grabación de audio emulando el sonido de la onomatopeya de ladridos.
 
+\vspace{5mm}
 Por último y para validar completamente el análisis de Dr.ScratchJr, los resultados del aspecto de Creatividad (figura~\ref{fig:creatividad_Test1}) también concuerdan con lo esperado.
 
 \begin{figure}[H]
@@ -1191,6 +1207,7 @@ Una vez cargado el zip y opcionalmente cambiado internamente en la aplicación e
   \label{fig:Test_zip}
 \end{figure}
 
+\newpage
 \section{Exportar datos en CSV}
 \label{sec:Cargar zip}
 
@@ -1254,12 +1271,15 @@ Realizar este trabajo final de grado ha sido un gran reto y un verdadero quebrad
 Nunca me había enfrentado a un proyecto tan amplio y complejo partiendo de cero.
 La mayoría de prácticas del Grado han estado guiadas y esquematizadas, teniendo gran parte de la información necesaria disponible para realizarlas y obviamente han sido mucho más breves sin requerir de tanta elaboración.
 
+\vspace{5mm}
 He aprendido, aunque tarde, ha organizar mi propio tiempo y enfrentarme a los problemas y solucionarlos.
 Durante el grado, siempre había unas fechas para realizar los exámenes y entregar trabajos que me empujaban y obligaban a esforzarme, y como durante la realización de este proyecto no tenia ninguna presión del tiempo, en cuanto me surgía cualquier problema me estancaba, lo dejaba pasar y volver a retomar el proyecto se me tornaba más complicado. 
 Pero al final conseguí compaginar el trabajo con el proyecto y aprovechar más el tiempo.
 
-Gracias a este proyecto he aprendido a elaborar una aplicación web completa, a manejar el código, las funciones, la base de datos, los archivos…para que todo tenga una estructura ordenada y enlazada. Por supuesto afianzando y ampliando todo lo aprendido en las asignaturas del Grado mencionadas en sección anterior~\ref{sec:aplicacion_aprendido}. 
+\vspace{5mm}
+Gracias a este proyecto he aprendido a elaborar una aplicación web completa, a manejar el código, las funciones, la base de datos, los archivos…para que todo tenga una estructura ordenada y enlazada. Por supuesto afianzando y ampliando todo lo estudiado en las asignaturas del Grado mencionadas en sección anterior~\ref{sec:aplicacion_aprendido}.
 
+\vspace{5mm}
 También a la hora de realizar la memoria he aprendido a plasmar y redactar todo el trabajo realizado y era algo que no estaba habituado a ello.
 
 \section{Trabajos futuros}
