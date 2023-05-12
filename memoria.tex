@@ -50,33 +50,37 @@
 
 \begin{titlepage}
 \begin{center}
-\includegraphics[scale=0.8]{img/URJ_logo_Color_POS.png}
+\includegraphics[scale=0.6]{img/URJ_logo_Color_POS.png}
 
 \vspace{1.75cm}
 
-\Large
-GRADO EN INGENIERÍA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA
-
-\vspace{0.4cm}
-
-\large
-Curso Académico 2022/2023
-
-\vspace{0.8cm}
-
-Trabajo Fin de Grado
-
-\vspace{2.5cm}
+\LARGE
+ESCUELA DE INGENIERÍA DE FUENLABRADA
+\vspace{1cm}
 
 \LARGE
+GRADO EN INGENIERÍA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA
+
+\vspace{1cm}
+\LARGE
+\textbf{TRABAJO FIN DE GRADO}
+
+\vspace{2cm}
+
+\Large
 DR.SCRATCHJR \\ 
 ANÁLISIS AUTOMÁTICO DE PROYECTOS SCRATCHJR
 
-\vspace{4cm}
+\vspace{2cm}
 
 \large
 Autor : Sergio Pérez Mazadiego \\
-Tutor : Dr. Gregorio Robles
+Tutor : Dr. Gregorio Robles\\
+\vspace{1cm}
+
+\large
+Curso académico 2022/2023
+
 \end{center}
 \end{titlepage}
 
@@ -150,8 +154,8 @@ mi familia y amigos}
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
 \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
 
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
-Además, la pareja quizás no sea para siempre, pero tu madre sí.
+Agradecer a mis padres por el apoyo, la confianza y sobre todo por servirme lo que ellos no han podido tener, esa comodidad y estabilidad que siempre ha hecho que pueda tener una vida sin preocupaciones y llena de oportunidades.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen
@@ -160,17 +164,19 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
-Han de quedar respondidas las siguientes preguntas:
+Este trabajo final de grado consiste en el desarrollo de una herramienta que analice proyectos de ScratchJr, un lenguaje de programación para niños de edades entre 5 y 7.  
+La idea surge con el objetivo de hacer una herramienta similar a Dr.Scratch, que es una aplicación web que analiza proyectos de Scratch, otro lenguaje de iniciación a la programación. 
 
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
+\vspace{5mm}
 
-Lo mejor es escribir el resumen al final.
+Entonces se ha creado una aplicación web llamada Dr.ScratchJr para que profesores o padres, de niños que usen ScratchJr, puedan subir sus proyectos y vean un análisis de éstos.
+En el análisis de un proyecto se estudia la variabilidad en el uso de bloques, los malos hábitos que contiene, la creatividad y otros datos que podrían llegar a ser de interés como el total de páginas o personajes que se usan en él. 
+La aplicación web ofrece la posibilidad de analizar uno, o varios proyectos a la vez, o crear una cuenta en la aplicación para poder almacenar los análisis de proyectos y tener una gestión de sus autores. 
+En ambos casos la aplicación dispone de la opción de exportar los datos de los análisis en formato CSV.
+
+\vspace{5mm}
+
+Las tecnologías que se han empleado son en el lado del servidor el software de desarrollo Django en el que se utiliza Python, y Bootstrap en el lado del cliente en el que se utiliza HTML, CSS y JavaScript.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -215,17 +221,17 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \label{chap:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{chap:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-El lenguaje de programación cada vez es más necesario que se empiece a trabajar en las aulas desde los inicios en la educación, igual que se enseña la lengua, las matemáticas, la historia, puesto que favorece la estructuración del pensamiento crítico y la lógica, esenciales en la resolución de problemas.
+Las habilidades de programación son cada vez  más necesarias que se empiecen a trabajar en las aulas desde los inicios en la educación, igual que se enseña la lengua, las matemáticas, la historia, puesto que favorecen la estructuración del pensamiento crítico y la lógica, esenciales en la resolución de problemas.
 Difícilmente se consigue enseñar a un niño de unos 5 o 6 años a que escriba código de programación.
-Pero si es posible que comience a familiarizarse con el mundo de la programación y su lenguaje general sin que se dé cuenta de una manera lúdica y al mismo tiempo formativa.
-Como en las primeras edades sus capacidades lectoescritoras todavía están formándose, por medio de herramientas vinculadas a elementos visuales como juegos, puzzles, aventuras, podemos arrancar el desarrollo del pensamiento computacional recurriendo a su creatividad. Herramientas cómo las aplicaciones Kodable, Bit by bit, Codekarts y ScratchJr. 
+Pero sí es posible que comience a familiarizarse con el mundo de la programación y su lenguaje general sin que se dé cuenta de una manera lúdica y al mismo tiempo formativa.
+Como en las primeras edades sus capacidades lectoescritoras todavía están formándose, por medio de herramientas vinculadas a elementos visuales como juegos, puzzles o aventuras, podemos arrancar el desarrollo del pensamiento computacional recurriendo a su creatividad. Algunas herramientas que podemos encontrar son las aplicaciones Kodable\footnote{\url{https://www.kodable.com/}}, Bit by bit\footnote{\url{http://rikaigames.com/bitbybit/}}, Codekarts\footnote{\url{https://civat.es/app/code-karts/}}  y ScratchJr\footnote{\url{https://www.scratchjr.org/}}. 
 
-De ésta última, ScratchJr (Sección~\ref{sec:scratchJr}), es donde parte este proyecto.
+De esta última, ScratchJr (Sección~\ref{sec:scratchJr}), es donde parte este proyecto.
 ScratchJr está basada en Scratch pero con su interfaz y lenguaje de programación rediseñados para niños más pequeños.
-En esta universidad se desarrolló la herramienta Dr.Scratch que permite a los usuarios de Scratch analizar sus proyectos y medir sus capacidades de programación cuantificadas por medidores de habilidades de pensamiento computacional.
+En la URJC se desarrolló la herramienta Dr.Scratch que permite a los usuarios de Scratch analizar sus proyectos y medir sus capacidades de programación cuantificadas por medidores de habilidades de pensamiento computacional.
 De esta misma idea surge Dr.ScratchJr.
-Pero debido a que los usuarios de ScratchJr al ser demasiado pequeños no tienen todavía la capacidad de poder autoevaluar sus propios proyectos, el objetivo principal de la herramienta Dr.ScratchJr es facilitar a los profesores el proceso de enseñanza de sus alumnos.
-En ella profesores pueden analizar los proyectos que hayan hecho sus alumnos en ScratchJr.
+Pero debido a que los usuarios de ScratchJr, al ser demasiado pequeños, no tienen todavía la capacidad de poder autoevaluar sus propios proyectos, el objetivo principal de la herramienta Dr.ScratchJr es facilitar a los profesores el proceso de enseñanza de sus alumnos.
+Con ella, los profesores pueden analizar los proyectos que hayan hecho sus alumnos en ScratchJr.
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
@@ -238,13 +244,13 @@ La memoria del trabajo está estructurada en los siguientes capítulos:
     \item Capítulo~\ref{chap:objetivos}: \textbf{Objetivos}. 
     Partiendo del objetivo general, se plantean los objetivos que se han ido marcando para la realización del proyecto.
     \item Capítulo~\ref{chap:estado}: \textbf{Estado del arte}. 
-    Pequeñas descripciones de las tecnologías utilizadas en la realización de la herramienta Dr.ScratchJr.
+    Aparecen pequeñas descripciones de las tecnologías utilizadas en la realización de la herramienta Dr.ScratchJr.
     \item Capítulo~\ref{chap:implementacion}: \textbf{Diseño e implementación}. 
     Se explica la arquitectura general de la herramienta Dr.ScratchJr, el algoritmo del tratamiento de datos para realizar el análisis y la vista de la aplicación web.
     \item Capítulo~\ref{chap:experimentos}: \textbf{Experimentos, validación y resultados}. 
-    Pruebas con un proyecto de test para validar que la herramienta detecta todos los datos a analizar correctamente, una pequeña comprobación de la correcta carga de varios proyectos y otra de la exportación de los datos en csv.
+    Se realizan pruebas con un proyecto de test para validar que la herramienta detecta todos los datos a analizar correctamente, una pequeña comprobación de la correcta carga de varios proyectos y otra de la exportación de los datos en CSV.
     \item Capítulo~\ref{chap:conclusiones}: \textbf{Conclusiones}. 
-    Varias secciones donde se trata la consecución de los objetivos, las asignaturas del Grado que me han servido para la realización del proyecto, aquello que he aprendido gracias a la elaboración de dicho proyecto y algunas ideas de la herramienta para futuras mejoras.
+    Se exponen varias secciones donde se trata la consecución de los objetivos, las asignaturas del Grado que me han servido para la realización del proyecto, aquello que he aprendido gracias a la elaboración de dicho proyecto y algunas ideas de la herramienta para futuras mejoras.
     
 \end{itemize}
 
@@ -263,27 +269,26 @@ La memoria del trabajo está estructurada en los siguientes capítulos:
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
 El objetivo principal de este proyecto es desarrollar una herramienta de análisis similar a Dr.Scratch para ScratchJr.
-En Dr.Scratch los usuarios pueden evaluar sus propios proyectos creados con Scratch, pero como los destinatarios de ScratchJr son niños, el objetivo real es crear una aplicación web con la función de ser una herramienta para que profesores o padres puedan analizar los proyectos de ScratchJr de los niños.
-Y de esta manera poder facilitar y agilizar el trabajo de evaluación y guiar a los niños a un mayor aprendizaje.??? (detectando los errores más frecuentes que suelen darse en la programación).
-% DUDA: mirar word
+En Dr.Scratch los usuarios pueden evaluar sus propios proyectos creados con Scratch, pero como los destinatarios de ScratchJr son niños, el objetivo es crear una aplicación web con la función de ser una herramienta para que profesores o padres puedan analizar los proyectos de ScratchJr de los niños.
+De esta manera se facilita y agiliza el trabajo de evaluación y poder guiar a los niños a un mayor aprendizaje detectando los errores más frecuentes que suelen darse en la programación.
+
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
 Para cumplir con el objetivo principal ha sido necesario seguir los siguientes objetivos específicos:
 
-\begin{itemize} % DUDA: mirar word ?
-    \item Investigar sobre los lenguajes de programación destinados a niños que se inician en ella. ???
+\begin{itemize}
     \item Comprender la herramienta DrScratch.
     \item Ampliar y mejorar los conocimientos sobre la creación de aplicaciones web con Django e instalar las tecnologías necesarias para ello.
     \item Examinar la estructura de la aplicación ScratchJr: el uso y funcionamiento, los tipos de bloques y componentes que pueden emplearse y los ficheros que forman un proyecto.
     \item Estudiar el JSON de datos que ScratchJr genera en cada proyecto.
     \item Extraer y almacenar en una base de datos los elementos y datos de los proyectos generados por ScratchJr.
-    \item Crear los algoritmos para tratar y adaptar los datos a la aplicación web.
+    \item Crear los algoritmos para tratar y adaptar los datos para los distintos criterios del análisis en la aplicación web.
     \item Desarrollar la aplicación web para que se adapte a diferentes dispositivos con distintas resoluciones.
     \item Diseñar un sistema de administración que permita a profesores tener un control de sus alumnos y los análisis de los proyectos de estos.
     \item Implementar un sistema de exportación de archivos con los resultados de los análisis de los proyectos.
-    \item Desplegar la aplicación web a un servidor web público.
+    \item Desplegar la aplicación web en un servidor web público.
     
 \end{itemize}
 
@@ -303,9 +308,15 @@ Para el desarrollo del proyecto se han utilizado una serie de tecnologías ya ex
 \section{ScratchJr}
 \label{sec:scratchJr}
 
-ScratchJr es un lenguaje de programación de iniciación que permite a los niños pequeños crear sus propias historias y juegos interactivos.
+ScratchJr~\cite{scratchjr} (figura~\ref{fig:scratchjr}) es un lenguaje de programación de iniciación que permite a los niños pequeños crear sus propias historias y juegos interactivos.
 Está inspirado en el lenguaje de programación Scratch\footnote{\url{https://scratch.mit.edu/about}} utilizado por millones de jóvenes en todo el mundo.
 ScratchJr ha rediseñado tanto la interfaz como el lenguaje de programación para adecuarlo al desarrollo de los niños más pequeños.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=8cm, keepaspectratio]{img/scratchjr.png}
+  \caption{Aplicación ScratchJr.}\label{fig:scratchjr}
+\end{figure}
 
 \vspace{5mm}
 A través de la unión de bloques gráficos de programación, los niños hacen que los personajes se muevan, salten, bailen y canten.
@@ -323,7 +334,7 @@ Además, permite compartir los proyectos creados entre usuarios a través de cor
 \section{Python}
 \label{sec:python}
 
-Python es un lenguaje de programación de alto nivel, interpretado, dinámico, fuertemente tipado y multiplataforma.
+Python~\cite{python} es un lenguaje de programación de alto nivel, interpretado, dinámico, fuertemente tipado y multiplataforma.
 Se considera multiparadigma ya que soporta parcialmente la orientación a objetos, programación imperativa y programación funcional, además de otros paradigmas mediante el uso de extensiones.
 
 \vspace{5mm}
@@ -337,7 +348,7 @@ Lo que supone que además de contar con una gran biblioteca estándar, exista un
 \section{Django}
 \label{sec:django}
 
-Django es un framework de desarrollo web de alto nivel escrito en Python (capítulo~\ref{sec:python}).
+Django~\cite{django} es un framework de desarrollo web de alto nivel escrito en Python (sección~\ref{sec:python}).
 Se encarga de facilitar la creación de sitios web dinámicos de manera relativamente rápida y con un diseño limpio.
 Es de software libre y de código abierto.
 
@@ -369,7 +380,7 @@ Además, su sistema de autenticación de usuarios proporciona una forma segura d
 \section{Django-registration} 
 \label{sec:django-registration}
 
-Es una aplicación extensible que proporciona la funcionalidad de registro de usuarios para sitios web con tecnología Django (capítulo~\ref{sec:django}).
+Django-registration~\cite{Bennett01:django-registration} es una aplicación extensible que proporciona la funcionalidad de registro de usuarios para sitios web con tecnología Django (sección~\ref{sec:django}).
 
 \vspace{5mm}
 Aunque casi todos los aspectos del proceso de registro son personalizables, proporciona vistas y mecanismos predefinidos para dos casos de uso comunes:
@@ -383,7 +394,7 @@ Aunque casi todos los aspectos del proceso de registro son personalizables, prop
 \section{HTML5 (HyperText Markup Language)} 
 \label{sec:html5}
 
-HTML5 es la última versión de HTML, la quinta, lanzada en 2014. Es un lenguaje de marcado que se utiliza para estructurar y desplegar páginas web.
+HTML5~\cite{html} es la última versión de HTML, la quinta, lanzada en 2014. Es un lenguaje de marcado que se utiliza para estructurar y desplegar páginas web.
 
 \vspace{5mm}
 Ofrece una gran adaptabilidad, una estructuración lógica y facilidad de interpretación.
@@ -400,24 +411,13 @@ Dispone de etiquetas que ofrecen contenido multimedia (audio y vídeo) para pode
 También posee variedad de elementos para introducción de datos en formularios.
 
 \vspace{5mm}
-Incorpora APIs (Application Programming Interfaces o Interfaces de programación de aplicaciones) que permiten incluir, a través de JavaScript (capítulo~\ref{sec:javascript}) componentes complejos.
-Algunas destacadas son:
-
-\begin{itemize}
-    \item \textbf{Web Storage:} permite almacenar información en la parte del cliente, es decir, en el navegador web.
-    Se divide en dos vertientes, ``SessionStorage'', para guardar información que caducará al final de la sesión y ``LocalStorage'', que permite almacenar datos que perduren entre distintas visitas del mismo usuario al sitio web.
-    \item \textbf{Canvas:} permite añadir elementos gráficos.
-    \item \textbf{Drag\&Drop:} nos permite tomar un elemento y arrastrarlo a una localización diferente.
-    En HTML5 cualquier elemento puede ser \textit{draggable} (arrastrable).
-    \item \textbf{Web Workers:} permiten ejecutar scripts en segundo plano (background), sin ser interrumpidos por eventos producidos por interacciones del usuario con la interfaz.
-    \item \textbf{Geolocation:} permite averiguar la posición del usuario, en términos de coordenadas geográficas de latitud y longitud.
-\end{itemize}
+Incorpora APIs (Application Programming Interfaces o Interfaces de programación de aplicaciones) que permiten incluir, a través de JavaScript (sección~\ref{sec:javascript}) componentes complejos.
 
 
 \section{CSS (Cascading Style Sheets)} 
 \label{sec:css}
 
-CSS es un lenguaje que sirve para crear páginas web o interfaces visualmente atractivas.
+CSS~\cite{css} es un lenguaje que sirve para crear páginas web o interfaces visualmente atractivas.
 Permite describir las propiedades de diseño de un contenido estructurado en un lenguaje de marcado.
 Generalmente este contenido consiste en un archivo HTML, pero CSS también es perfectamente compatible con otras tecnologías como XML.
 
@@ -426,14 +426,14 @@ Se le denomina estilos en cascada porque se aplican de arriba a abajo (siguiendo
 
 \vspace{5mm}
 Con CSS se logra separar del archivo HTML, los contenidos y el formato.
-Esta separación puede darse dentro del propio archivo HTML o separándolo en una hoja de estilo .css. 
+Esta separación puede darse dentro del propio archivo HTML o separándolo en una hoja de estilo .css en un fichero independiente. 
 La separación permite modificar la estética de la página sin tener que modificar el contenido, reutilizar una sola hoja de estilos para varios archivos HTML, y reducir la complejidad y la repetición de código en la estructura del archivo.
 
 
 \section{JavaScript} 
 \label{sec:javascript}
 
-JavaScript (JS) es un lenguaje de programación interpretado, dinámico y débilmente tipado.
+JavaScript (JS)~\cite{} es un lenguaje de programación interpretado, dinámico y débilmente tipado.
 Multiparadigma ya que es orientado a objetos, utiliza programación basada en prototipos, imperativa y declarativa (funcional).
 
 \vspace{5mm}
@@ -448,7 +448,7 @@ Se relaciona de modo fluido y transparente con HTML y CSS, ofreciendo más dinam
 \section{Bootstrap} 
 \label{sec:bootstrap}
 
-Bootstrap es un framework front-end utilizado para desarrollar sitios y aplicaciones web.
+Bootstrap~\cite{bootstrap} (figura~\ref{fig:bootstrap}) es un framework front-end utilizado para desarrollar sitios y aplicaciones web.
 Tiene como objetivo que el diseño web sea más rápido y sencillo, siendo compatible con la mayoría de navegadores web.
 
 \vspace{5mm}
@@ -466,11 +466,17 @@ Mediante reglas media queries adapta la representación del contenido a caracter
 El sistema de rejillas de Bootstrap utiliza una serie de contenedores, filas y columnas para diseñar y alinear el contenido de manera flexible.
 Las filas deben colocarse dentro de un contenedor para una alineación y un relleno adecuados, y cada fila puede hasta dividirse en doce columnas.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=8cm, keepaspectratio]{img/bootstrap.png}
+  \caption{Bootstrap.}\label{fig:bootstrap}
+\end{figure}
+
 
 \section{Pandas} 
 \label{sec:pandas}
 
-Pandas es una biblioteca construida sobre el lenguaje de programación Python de manipulación y análisis de datos.
+Pandas~\cite{pandas} es una biblioteca construida sobre el lenguaje de programación Python de manipulación y análisis de datos.
 Es una herramienta de código abierto, rápida, potente, flexible y fácil de usar.
 Proporciona estructuras de datos y herramientas de análisis de datos de alto rendimiento.
 
@@ -496,7 +502,7 @@ Algunas características importantes de la herramienta:
 \section{Visual Studio Code} 
 \label{sec:visual-studio-code}
 
-Visual Studio Code es un editor de código fuente ligero pero potente que se ejecuta en el escritorio y está disponible para Windows, macOS y Linux.
+Visual Studio Code~\cite{visualstudio} es un editor de código fuente ligero pero potente que se ejecuta en el escritorio y está disponible para Windows, macOS y Linux.
 Se basa en Electron, un framework que se utiliza para implementar Chromium y Node.js como aplicaciones para escritorio.
 
 \vspace{5mm}
@@ -510,6 +516,12 @@ Viene con soporte incorporado para JavaScript, TypeScript y Node.js, pero gracia
 \vspace{5mm}
 Además, contiene soporte para la depuración, resaltado de sintaxis, recomendaciones de autocompletado de código, refactorización de código y control integrado de Git.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=16cm, keepaspectratio]{img/visualstudiocode.png}
+  \caption{Visual Studio Code.}\label{fig:visualstudiocode}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -520,7 +532,7 @@ Además, contiene soporte para la depuración, resaltado de sintaxis, recomendac
 \chapter{Diseño e implementación}
 \label{chap:implementacion}
 
-En este capítulo se describe la arquitectura y como se ha diseñado la aplicación Dr.ScratchJr.
+En este capítulo se describe la arquitectura y cómo se ha diseñado la aplicación Dr.ScratchJr.
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
@@ -531,10 +543,10 @@ En este capítulo se describe la arquitectura y como se ha diseñado la aplicaci
   \caption{Arquitectura Dr.ScratchJr.}\label{fig:arquitectura}
 \end{figure}
 
-La arquitectura que sigue Dr.ScratchJr es el modelo cliente-servidor.
+La arquitectura que sigue Dr.ScratchJr es la del modelo cliente-servidor.
 El usuario a través del navegador web se conecta a la aplicación web Dr.ScrtachJr.
 Subirá uno o varios proyectos mediante los formularios que dispone. 
-El navegador manda una petición HTTP a través de una URL que es interpretada por el mapa de URLS (URLmap o URLconf) para encontrar la vista apropiada.
+El navegador manda una petición HTTP con una URL que es interpretada por el mapa de URLS (URLmap o URLconf) para encontrar la vista apropiada.
 La vista (\emph{View}) valida los datos de los formularios, estructura esos datos e interactúa con el modelo para almacenar y obtener datos.
 El modelo (\emph{Model}) define la estructura y Django se encarga de comunicarse con la base de datos.
 La plantilla (\emph{Template}) recibe los datos de la vista y luego los organiza para la presentación al navegador a través de una respuesta HTTP.
@@ -547,7 +559,7 @@ La plantilla (\emph{Template}) recibe los datos de la vista y luego los organiza
 \vspace{5mm}
 El algoritmo que se ha llevado a cabo para la realización de la función principal de la aplicación Dr.ScratchJr, que es analizar proyectos, comienza con la extracción de los datos.
 ScratchJr tiene la opción de compartir proyectos vía correo electrónico o AirDrop, lo que genera un archivo con extensión .sjr.
-Es a partir de este archivo SJR donde partimos.
+Es a partir de este archivo SJR de donde partimos.
 Siendo este un archivo comprimido Zip que puede contener carpetas y archivos de recursos dependiendo de los elementos que se usen en la aplicación ScracthJr:
 
 \begin{itemize}
@@ -578,14 +590,14 @@ El procedimiento que se ha seguido para obtener los datos necesarios ha sido:
 \begin{itemize}
     \item Descomprimir el archivo zip.
     \item Copiar el contenido de las carpetas \emph{characters}, \emph{backgrounds} y \emph{sounds} en local.
-    \item Obtener del archivo \emph{data.json} todos los valores que pueden llegar a ser de utilidad en futuros tipos de análisis de proyectos y almacenarlos en la base de datos (figura ~\ref{fig:bd_json}).
+    \item Obtener del archivo \emph{data.json} todos los valores que pueden llegar a ser de utilidad en futuros tipos de análisis de proyectos y almacenarlos en la base de datos (figura~\ref{fig:bd_json}).
     \item Adaptar dichos datos para realizar las distintas variedades del análisis.
 \end{itemize}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=16cm, keepaspectratio]{img/bd_json.png}
-  \caption{Json en base de datos.}\label{fig:bd_json}
+  \caption{Datos del JSON en la base de datos.}\label{fig:bd_json}
 \end{figure}
 
 % Algoritmo: Criterios
@@ -597,11 +609,11 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
 
 \begin{itemize}
     \item En el aspecto \emph{Variabilidad} se ha querido evaluar el uso de bloques en el proyecto, es decir la cantidad de bloques distintos que se han utilizado.
-    Para ello se distinguen, como en la aplicación ScratchJr, cinco tipos de bloques: Eventos (figura ~\ref{fig:evento}), Movimiento (figura ~\ref{fig:movimiento}), Apariencia (figura ~\ref{fig:apariencia}), Sonido (figura ~\ref{fig:sonido}), Control (figura ~\ref{fig:control}) y Finalización (figura ~\ref{fig:finalizacion}).
-    El algoritmo, para cada uno de los tipos, devuelve los bloques que se han empleado al menos una vez en todo el proyecto.
-    En Dr.ScratchJr se ha tomado como la misma clase de bloque aquellos que hacen la misma función pero de manera opuesta.
+    Para ello se distinguen, como en la aplicación ScratchJr, cinco tipos de bloques: Eventos (figura~\ref{fig:evento}), Movimiento (figura~\ref{fig:movimiento}), Apariencia (figura~\ref{fig:apariencia}), Sonido (figura~\ref{fig:sonido}), Control (figura~\ref{fig:control}) y Finalización (figura~\ref{fig:finalizacion}).
+    El algoritmo devuelve, para cada uno de los tipos, los bloques que se han empleado al menos una vez en todo el proyecto.
+    
+    En Dr.ScratchJr se ha tomado como la misma clase de bloque, como se puede observar en las figuras~\ref{fig:movimiento} y~\ref{fig:apariencia},  aquéllos que hacen la misma función pero de manera opuesta.
     Como es el caso de los bloques \emph{Girar a la derecha} y \emph{Girar a la izquierda}, \emph{Mover a la derecha} y \emph{Mover a la izquierda}, \emph{Subir} y \emph{Bajar}, \emph{Crecer} y \emph{Disminuir}, y \emph{Mostrar} y \emph{Ocultar}. 
-    Se puede observar en la figuras ~\ref{fig:movimiento} y ~\ref{fig:apariencia}.
 
     \begin{figure}[H]
      \centering
@@ -625,7 +637,7 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
       \subfloat[Finalización]{
        \label{fig:finalizacion}
         \includegraphics[width=0.49\textwidth]{img/finalizacion.png}}
-     \caption{Tipos de bloques} \label{fig:bloques}
+     \caption{Tipos de bloques en Dr.ScratchJr} \label{fig:bloques}
     \end{figure}
     \newpage
     
@@ -634,10 +646,10 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
         \item \emph{dead\_code(adapted\_dict):} función que devuelve una lista con las secuencias de bloques que no comiencen con un bloque de Eventos.
         También están incluidas en la lista las secuencias que comienzan con el bloque ``Comenzar con mensaje'' de un color, pero solo cuando no aparece en el proyecto ningún bloque ``Enviar mensaje'' del mismo color, puesto que esa secuencia nunca se ejecutaría y debe ser considerado código muerto.
         
-        Para ello, el algoritmo busca el primer bloque de cada secuencia y si no coincide con ninguno de los bloques de Eventos (figura ~\ref{fig:evento}), se añade a la lista la secuencia junto con el personaje que la utilice y la página donde se encuentre.
+        Para ello, el algoritmo busca el primer bloque de cada secuencia y si no coincide con ninguno de los bloques de Eventos (figura~\ref{fig:evento}), se añade a la lista la secuencia junto con el personaje que la utilice y la página donde se encuentre.
         En el caso de coincidir el primer bloque de una secuencia con el bloque ``Comenzar con mensaje'' de un color, se busca en todas las secuencias de todo el proyecto si existe el bloque ``Enviar mensaje'' de ese mismo color, y si no se encuentra, se añade la secuencia a la lista del mismo modo que se ha comentado antes.
 
-        \item \emph{unfinished\_code(adapted\_dict):} localiza el último bloque de cada secuencia del proyecto y si éste no es un bloque de Finalización (figura ~\ref{fig:finalizacion}), añade dicha secuencia, junto con el personaje que la utilice y la página donde se encuentre, a una lista que es devuelta al finalizar la búsqueda en todas las secuencias.
+        \item \emph{unfinished\_code(adapted\_dict):} localiza el último bloque de cada secuencia del proyecto y si éste no es un bloque de Finalización (figura~\ref{fig:finalizacion}), añade dicha secuencia, junto con el personaje que la utilice y la página donde se encuentre, a una lista que es devuelta al finalizar la búsqueda en todas las secuencias.
 
         \item \emph{equal\_adjac\_blocks(adapted\_dict):} busca secuencias con bloques repetidos unidos que puedan ser reemplazados por un solo bloque con atributos.
         Los bloques con atributos son aquellos que se puede indicar el número de veces que se quiere que el personaje haga la acción que indican dichos bloques.
@@ -653,7 +665,7 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
          \end{center}
      \end{itemize}
 
-    \item En el criterio \emph{Creatividad} se busca si el usuario ha generado nuevo contenido respecto al contenido que proporciona la aplicación ScratchJr.
+    \item Para el criterio \emph{Creatividad} se busca si el usuario ha generado nuevo contenido respecto al contenido que proporciona la aplicación ScratchJr.
 
     El propio programa de ScratchJr aplica el algoritmo MD5 a sus archivos multimedia que tiene por defecto para saber si han sido modificadas.
     Los archivos que han sido modificados por el usuario son nombrados con 32 dígitos hexadecimales.
@@ -697,24 +709,24 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
 \begin{figure}[H]
   \centering
   \includegraphics[width=16cm, keepaspectratio]{img/entidad-relacion.png}
-  \caption{Criterios del análisis en base de datos.}\label{fig:bd_criterios}
+  \caption{Esquema entidad-relación de los criterios del análisis.}\label{fig:bd_criterios}
 \end{figure}
 
 
 % Algoritmo: proceso final
 
 \vspace{5mm}
-Una vez el algoritmo ha abstraído los datos para su análisis, se almacenan y se introducen en diccionarios que se utilizan como contexto para representar (renderizar) ?? las plantillas que muestran los resultados del análisis.
+Una vez el algoritmo ha abstraído los datos para su análisis, se almacenan y se introducen en diccionarios que se utilizan como contexto para representar (renderizar) las plantillas que muestran los resultados del análisis.
 Estos diccionarios se almacenan igualmente en base de datos (figura~\ref{fig:bd_analisis}) de manera temporal para posteriormente utilizarlos también para renderizar las plantillas que muestran los detalles de un tipo de análisis en concreto.
 
 \begin{figure}[H]
   \centering
   \includegraphics[keepaspectratio]{img/bd_analisis.png}
-  \caption{Análisis en base de datos.}\label{fig:bd_analisis}
+  \caption{Tabla análisis en la base de datos.}\label{fig:bd_analisis}
 \end{figure}
 
 \vspace{5mm}
-El proceso para el análisis de múltiples proyectos es el mismo salvo que en lugar de renderizarse ?? primero la plantilla del análisis de un proyecto, se renderiza ?? una plantilla con un listado de los proyectos subidos junto al estudiante asociado a ese proyecto (figura~\ref{fig:listado_zip}).
+El proceso para el análisis de múltiples proyectos es el mismo salvo que en lugar de representarse primero la plantilla del análisis de un proyecto, se renderiza una plantilla con un listado de los proyectos subidos junto al estudiante asociado a ese proyecto (figura~\ref{fig:listado_zip}).
 A partir de ese listado se puede ver el análisis de cada proyecto individualmente.
 
 \begin{figure}[H]
@@ -724,16 +736,17 @@ A partir de ese listado se puede ver el análisis de cada proyecto individualmen
 \end{figure}
 
 En cualquier listado con proyectos en la aplicación web Dr.ScratchJr existe la posibilidad de exportar los datos del análisis de los proyectos. 
-Al exportar se genera un zip, los datos se almacenan en tres ficheros csv (badhabits-1, otherdata-1, variability-1) y en una hoja de cálculo de Microsoft Excel llamada data.xlsx con los mismos datos de los tres csv, pero agrupados en pestañas en un solo documento.
+Al exportar se genera un zip, los datos se almacenan en tres ficheros CSV (badhabits-1, otherdata-1, variability-1) y en una hoja de cálculo de Microsoft Excel llamada data.xlsx con los mismos datos de los tres ficheros CSV, pero agrupados en pestañas en un solo documento.
 
+Dr.ScratchJr dispone de la opción de cambiar a su pagina web el idioma a español o a inglés gracias al módulo gettext, disponible en Django, y creando los archivos de traducción para cada uno de los lenguajes.
 
 \section{Página web}
 \label{sec:pagina-web}
 
 Al acceder a la aplicación web sin estar identificado desde un ordenador se muestran dos cuadros donde el usuario puede introducir uno o varios proyectos a la vez para que sean analizados, una breve presentación donde sugiere que el usuario se registre para poder almacenar los análisis que suba a la herramienta y un panel lateral en el lado izquierdo para ayudar al usuario.
 
-El primer cuadro sirve para cargar un proyecto de ScratchJr con extensión .sjr a fin de visualizar su análisis al instante.
-En el caso de que estés registrado en Dr.ScratchJr aparecerá también un recuadro donde podrás asociar dicho proyecto con su autor si este ya existe o crear uno nuevo, y poder almacenar su análisis para posteriores visualizaciones.
+El primer cuadro sirve para cargar un proyecto de ScratchJr, con extensión .sjr, a fin de visualizar su análisis al instante.
+En el caso de que se esté registrado en Dr.ScratchJr aparecerá también un recuadro donde podrás asociar dicho proyecto con su autor, si este ya existe, o crear uno nuevo, y poder almacenar su análisis para posteriores visualizaciones.
 
 El segundo cuadro da la posibilidad de cargar varios proyectos de una sola vez.
 Para ello, es necesario haber almacenado previamente los proyectos con extensión .sjr en un archivo comprimido .zip. Y es este archivo comprimido el que hay que cargar en este cuadro.
@@ -754,18 +767,18 @@ En el caso de haber iniciado sesión, también existe la opción de cambiarle el
 % 
 
 
-\subsection{Direcciones urls}
+\subsection{Direcciones URLs de la aplicación}
 \label{subsec:Tabla de urls con sus vistas}
 
 
-La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las vistas que están asociadas a las urls de la aplicacion web Dr.ScratchJr.
+La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las vistas que están asociadas a las URLs de la aplicación web Dr.ScratchJr.
 
     \begin{table}[H]
      \begin{center}
      \begin{tabular}{ | m{3.1cm} | m{3.3cm} | m{8.8cm} | }
       \hline \textbf{Path URL} & \textbf{Vista} & \textbf{Función}\\ \hline
     
-        “ “ &
+        `` '' &
         home\_view &
         Página principal de la aplicación con formularios para cargar proyectos \\ \hline
         
@@ -799,15 +812,15 @@ La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las 
         
         create\_csv\_zip/ \newline $<$str:zip\_name$>$/ \newline $<$str:rand\_folder$>$/ &
         create\_csv\_zip &
-        Vista que no renderiza ninguna página, sino que crea un csv de los datos de los proyectos de un zip \\ \hline
+        Vista que no renderiza ninguna página, sino que crea un CSV de los datos de los proyectos de un zip \\ \hline
         
         create\_csv\_student/ \newline $<$str:student$>$/ &
         create\_csv\_student &
-        Vista que no renderiza ninguna página, sino que crea un csv de los datos de los proyectos de un estudiante \\ \hline
+        Vista que no renderiza ninguna página, sino que crea un CSV de los datos de los proyectos de un estudiante \\ \hline
         
         create\_csv\_user/ &
         create\_csv\_user &
-        Vista que no renderiza ninguna página, sino que crea un csv de los datos de todos los proyectos de todos los estudiantes que tenga almacenado un usuario \\ \hline
+        Vista que no renderiza ninguna página, sino que crea un CSV de los datos de todos los proyectos de todos los estudiantes que tenga almacenado un usuario \\ \hline
         
         albums/upload/ &
         upload\_files\_view &
@@ -851,7 +864,7 @@ La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las 
         
         delete/ \newline $<$str:student$>$/ \newline $<$str:file\_name$>$/ \newline $<$str:times$>$/ & 
         delete\_regist &
-        Misma tabla que en “student\_view”, pero sin el proyecto eliminado \\ \hline
+        Misma tabla que en ``student\_view'', pero sin el proyecto eliminado \\ \hline
     
       \end{tabular}
      \end{center}
@@ -864,15 +877,15 @@ La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las 
     
         delete\_student/ \newline $<$student$>$/ & 
         delete\_student & 
-        Misma tabla que en “review\_view”, pero sin el estudiante eliminado \\ \hline  
+        Misma tabla que en ``review\_view'', pero sin el estudiante eliminado \\ \hline  
         
         edit\_student/ \newline $<$old\_student$>$/ \newline $<$new\_student$>$/ &
         edit\_student &
-        Misma tabla que en “review\_view”, pero con el nombre del estudiante modificado \\ \hline  
+        Misma tabla que en ``review\_view'', pero con el nombre del estudiante modificado \\ \hline  
         
         edit\_file/ \newline $<$old\_file$>$/ \newline $<$student$>$/ \newline $<$new\_file$>$/ &
         edit\_file &
-        Misma tabla que en “student\_view”, pero con el nombre del proyecto modificado \\ \hline  
+        Misma tabla que en ``student\_view'', pero con el nombre del proyecto modificado \\ \hline  
         
         delete\_account/ &
         delete\_account &
@@ -909,7 +922,7 @@ La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las 
     
     
        \end{tabular}
-      \caption{Tabla explicativa de las urls}
+      \caption{Tabla explicativa de las URLs}
       \label{tabla:path-url}
      \end{center}
     \end{table}
@@ -919,10 +932,10 @@ La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las 
 
 La página que muestra el análisis de un proyecto consta de 4 secciones:
 \begin{itemize}
-    \item Variabilidad (Uso de bloques) (figura ~\ref{fig:variabilidad}): esta sección contiene un listado con los tipos de bloques que existen, con unos niveles asociados a cada uno.
-    Se distinguen, como en la aplicación ScratchJr, seis tipos de bloques: Eventos (figura ~\ref{fig:evento}), Movimiento (figura ~\ref{fig:movimiento}), Apariencia (figura ~\ref{fig:apariencia}), Sonido (figura ~\ref{fig:sonido}), Control (figura ~\ref{fig:control}) y Finalización (figura ~\ref{fig:finalizacion}).
+    \item Variabilidad (Uso de bloques) (figura~\ref{fig:variabilidad}): esta sección contiene un listado con los tipos de bloques que existen, con unos niveles asociados a cada uno.
+    Se distinguen, como en la aplicación ScratchJr, seis tipos de bloques: Eventos (figura~\ref{fig:evento}), Movimiento (figura~\ref{fig:movimiento}), Apariencia (figura~\ref{fig:apariencia}), Sonido (figura~\ref{fig:sonido}), Control (figura~\ref{fig:control}) y Finalización (figura~\ref{fig:finalizacion}).
     El nivel individual es la cantidad de bloques que se han empleado al menos una vez en todo el proyecto sobre los bloques totales que contiene cada tipo. 
-    Cabe destacar que Dr.ScratchJr toma como el mismo bloque aquellos que hacen la misma función, pero de manera opuesta, como se puede observar en las figura ~\ref{fig:bloques}.
+    Cabe destacar que Dr.ScratchJr toma como el mismo bloque aquellos que hacen la misma función, pero de manera opuesta, como se puede observar en las figuras~\ref{fig:movimiento} y~\ref{fig:apariencia}.
     Además, esta sección contiene el nivel total, que es la suma de todos los bloques que se han usado al menos una vez sobre la suma del total de bloques de cada tipo.
      \begin{figure}[H]
        \centering
@@ -930,14 +943,14 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
        \caption{Sección Variabilidad.}
        \label{fig:variabilidad}
      \end{figure}
-    Existe la opción de obtener más detalles pinchando sobre cualquier nivel obtenido de los tipos de bloques, y aparecerá una vista que mostrará aquellos bloques que no han sido usados en el proyecto (figura ~\ref{fig:variabilidad-nivel-detalles}).
+    Existe la opción de obtener más detalles pinchando sobre cualquier nivel obtenido de los tipos de bloques, y aparecerá una vista que mostrará aquellos bloques que no han sido usados en el proyecto (figura~\ref{fig:variabilidad-nivel-detalles}).
     \begin{figure}[H]
        \centering
        \includegraphics[width=16cm, keepaspectratio]{img/variabilidad-nivel-detalles.PNG}
        \caption{Ejemplo detalles del apartado Movimiento de la sección Variabilidad.}\label{fig:variabilidad-nivel-detalles}
     \end{figure}
 
-    \item Malos hábitos (figura ~\ref{fig:malos-habitos}): aquí se muestra la cantidad de ciertos tipos de errores encontrados en el proyecto que el creador debe evitar:
+    \item Malos hábitos (figura~\ref{fig:malos-habitos}): aquí se muestra la cantidad de ciertos tipos de errores encontrados en el proyecto que el creador debe evitar:
      \begin{itemize}
         \item Código muerto: cantidad de secuencias de bloques que no se van a ejecutar porque no comienzan por un bloque de Evento. 
         También es considerado código muerto cuando una secuencia comienza por el bloque de Evento `Comenzar con mensaje' de un color, pero no hay en el proyecto un bloque `Enviar mensaje' del mismo color.
@@ -958,7 +971,7 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
        \label{fig:malos-habitos}
     \end{figure}
         
-    Salvo en este último caso de malos hábitos (personajes con mismo nombre en una página), se encuentra la opción de pinchar en los resultados para obtener más detalles mostrados en forma de tabla con la siguiente estructura: página, personaje, nombre secuencia y secuencia (figura ~\ref{fig:bloques-adyac-detalles}). 
+    Salvo en este último caso de malos hábitos (personajes con mismo nombre en una página), se encuentra la opción de pinchar en los resultados para obtener más detalles mostrados en forma de tabla con la siguiente estructura: página, personaje, nombre secuencia y secuencia (figura~\ref{fig:bloques-adyac-detalles}). 
     \begin{figure}[H]
         \centering
         \includegraphics[width=16cm, keepaspectratio]{img/maloshabitos-ady-detalles.PNG}
@@ -966,7 +979,7 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
         \label{fig:bloques-adyac-detalles}
     \end{figure}
 
-    \item Creatividad (figura ~\ref{fig:creatividad}): muestra si el usuario ha generado nuevo contenido para hacer su proyecto en relación a:
+    \item Creatividad (figura~\ref{fig:creatividad}): muestra si el usuario ha generado nuevo contenido para hacer su proyecto en relación a:
      \begin{itemize}
         \item Páginas editadas: cantidad de páginas que tienen su imagen de fondo editada respecto a las imágenes que vienen por defecto, o ha creado un fondo completamente nuevo en una página en blanco con el editor de pintura de ScratchJr.
         \item Personajes editados: número de personajes que han sido editados a través del editor de ScratchJr.
@@ -979,8 +992,8 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
         \caption{Ejemplo sección Creatividad.}
         \label{fig:creatividad}
     \end{figure}
-    Al pinchar sobre las cantidades de páginas o personajes editados, puedes ver la imagen correspondiente a cada página o personaje editado (figura ~\ref{fig:personajes-editados-detalles}).
-    Además pinchando en la imagen puedes verla en tamaño completo en una pestaña nueva.
+    Al pinchar sobre las cantidades de páginas o personajes editados, se puede ver la imagen correspondiente a cada página o personaje editado (figura~\ref{fig:personajes-editados-detalles}).
+    Además pinchando en la imagen se puede ver en tamaño completo en una pestaña nueva.
     \begin{figure}[H]
         \centering
         \includegraphics[width=15cm, keepaspectratio]{img/creatividad-detalles-personajes.PNG}
@@ -988,7 +1001,7 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
         \label{fig:personajes-editados-detalles}
     \end{figure}
     
-    \item Otros datos (figura ~\ref{fig:otros_datos}): contiene un listado con datos que pueden llegar a ser de interés para analizar un proyecto:
+    \item Otros datos (figura~\ref{fig:otros_datos}): contiene un listado con datos que pueden llegar a ser de interés para analizar un proyecto:
      \begin{itemize}
         \item Total de páginas: número de páginas que se han utilizado para todo el proyecto.
         \item Total de personajes: número total de personajes empleados en todo el proyecto.
@@ -1011,10 +1024,10 @@ La página que muestra el análisis de un proyecto consta de 4 secciones:
 \vspace{5mm}
 Los tipos de listados que puede haber son:
 \begin{itemize}
-    \item De un archivo zip: listado mencionado anteriormente (figura ~\ref{fig:listado_zip}) de análisis de múltiples proyectos.
+    \item De un archivo zip: listado mencionado anteriormente (figura~\ref{fig:listado_zip}) de análisis de múltiples proyectos.
     Contiene un listado de los proyectos que están comprimidos en el zip, junto a los estudiantes asociados a dichos proyectos.
     Posibilidad de exportar los datos del análisis de todos los proyectos que contenga el zip.
-    \item Estudiantes (figura ~\ref{fig:listado_estudiantes}): se accede principalmente desde el panel lateral.
+    \item Estudiantes (figura~\ref{fig:listado_estudiantes}): se accede principalmente desde el panel lateral.
     Muestra todos los estudiantes que tenga el usuario y el número de proyectos de cada estudiante.
     Se encuentra la posibilidad de editar el nombre y/o eliminar a cualquier estudiante junto con todos los proyectos con los que esté asociado.
     En este listado se pueden exportar los datos del análisis de todos los proyectos de todos los estudiantes que tenga el profesor de una sola vez.
@@ -1023,7 +1036,7 @@ Los tipos de listados que puede haber son:
       \includegraphics[width=16cm, keepaspectratio]{img/listado_estudiantes.png}
       \caption{Ejemplo de un listado de los estudiantes de un usuario.}\label{fig:listado_estudiantes}
     \end{figure}
-    \item Estudiante (figura ~\ref{fig:listado_estudiante}): contiene un listado de los proyectos de un estudiante en particular.
+    \item Estudiante (figura~\ref{fig:listado_estudiante}): contiene un listado de los proyectos de un estudiante en particular.
     Además de la fecha, una nota del criterio de Variabilidad y el número de Malos hábitos del proyecto.
     También se puede editar el nombre de un proyecto y/o eliminar un proyecto en concreto.
     Posibilidad de exportar los datos del análisis de todos los proyectos del estudiante.
@@ -1034,7 +1047,7 @@ Los tipos de listados que puede haber son:
       \label{fig:listado_estudiante}
     \end{figure}
 \end{itemize}
-Como ya se ha mencionado, al exportar se genera un zip que contiene tres ficheros csv (badhabits-1, otherdata-1, variability-1) y una hoja de cálculo (data.xlsx) con los datos del análisis de tantos proyectos como tenga el listado desde donde se haya exportado.
+Como ya se ha mencionado, al exportar se genera un zip que contiene tres ficheros CSV (badhabits-1, otherdata-1, variability-1) y una hoja de cálculo (data.xlsx) con los datos del análisis de tantos proyectos como tenga el listado desde donde se haya exportado.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1054,7 +1067,7 @@ Para ello, seguimos todos los aspectos que incluye un análisis de Dr.ScratchJr 
 
 Test1.sjr posee un total de dos páginas, la primera con una imagen de fondo del interior del océano y la segunda con una imagen de una playa.
 La primera página contiene los personajes ``Buceador'' y dos ``Caballito de mar'' y la segunda los personajes ``Perro'' y ``Remero'', haciendo un total de 5 personajes en el proyecto. 
-Hay un texto “Playa Blanca” en la página 2, siendo el único texto del proyecto. 
+Hay un texto ``Playa Blanca'' en la página 2, siendo el único texto del proyecto. 
 La primera página con una imagen de fondo del interior del océano no ha sido cambiada por el editor de ScratchJr y es de las que dispone el programa por defecto.
 Al igual ocurre con cuatro de los cinco personajes que tiene el proyecto, que son los que proporciona la aplicación y no han sido editados.
 
@@ -1169,7 +1182,7 @@ Para ello usamos como ejemplo cuatro proyectos con los nombres modificados como 
   \label{fig:Test_zip0}
 \end{figure}
 
-Una vez cargado el zip y opcionalmente cambiado internamente en la aplicación el nombre de los proyectos o de los autores, aparece un listado como en la figura~\ref{fig:Test_zip} y donde comprobamos que se han cargado correctamente los proyectos para la posterior visualización del análisis de cada uno de ellos o exportando todos los análisis en formato csv.
+Una vez cargado el zip y opcionalmente cambiado internamente en la aplicación el nombre de los proyectos o de los autores, aparece un listado como en la figura~\ref{fig:Test_zip} y donde comprobamos que se han cargado correctamente los proyectos para la posterior visualización del análisis de cada uno de ellos o exportando todos los análisis en formato CSV.
 
 \begin{figure}[H]
   \centering
@@ -1182,24 +1195,24 @@ Una vez cargado el zip y opcionalmente cambiado internamente en la aplicación e
 \label{sec:Cargar zip}
 
 Si se cargan varios proyectos a la vez a través de un zip o si se ha iniciado sesión y están almacenados los proyectos, Dr.ScratchJr tiene la opción de exportar los análisis de los proyectos.
-En la figura~\ref{fig:Test1_csv}, vemos como se exportan correctamente en tres csv distintos los datos del análisis del proyecto del ejemplo anterior Test1.sjr. 
+En la figura~\ref{fig:Test1_csv}, vemos como se exportan correctamente en tres ficheros CSV distintos los datos del análisis del proyecto del ejemplo anterior Test1.sjr. 
 Aunque también se exportan estos mismos datos en un archivo Excel dividido en pestañas.
 
 
 \begin{figure}[H]
  \centering
-  \subfloat[variabilidad csv]{
+  \subfloat[Variabilidad CSV]{
    \label{fig:variabilidad_csv}
     \includegraphics[width=0.98\textwidth]{img/variabilidad_csv.jpg}}
     \vspace{7mm}
-  \subfloat[Otros datos csv]{
+  \subfloat[Otros datos CSV]{
    \label{fig:otros_datos_csv}
     \includegraphics[width=0.98\textwidth]{img/otros_datos_csv.png}}
     \vspace{7mm}
-  \subfloat[Malos habitos csv]{
+  \subfloat[Malos habitos CSV]{
    \label{fig:maloshabitos_csv}
     \includegraphics[width=0.98\textwidth]{img/maloshabitos_csv.jpg}}
- \caption{Datos en csv del análisis de Test1.sjr} \label{fig:Test1_csv}
+ \caption{Datos en CSV del análisis de Test1.sjr} \label{fig:Test1_csv}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1215,17 +1228,52 @@ Aunque también se exportan estos mismos datos en un archivo Excel dividido en p
 \section{Consecución de objetivos}
 \label{sec:consecucion-objetivos}
 
+Los objetivos de este trabajo final de grado se han cumplido. 
+Se ha creado una herramienta dónde se analizan proyectos de ScratchJr. 
+Profesores o padres pueden subir a la aplicación web uno o varios proyectos simultáneamente de sus alumnos o hijos, ver el análisis de cada uno, almacenar y/o exportar los datos de los análisis.
 
 \section{Aplicación de lo aprendido}
-\label{sec:aplicacion}
+\label{sec:aplicacion_aprendido}
 
+La mayoría de asignaturas que he cursado durante el Grado En Ingeniería En Sistemas Audiovisuales y Multimedia me han ayudado para la realización de este trabajo, puesto que me han ido formando en diversos aspectos, pero destacan:
+
+\begin{itemize}
+    \item Expresión Oral y Escrita y Búsqueda de Información porque me ha ayudado a redactar, buscar información y desarrollar la memoria.
+    \item Informática I donde gracias al lenguaje de introducción a la programación ``Picky'' comencé a programar y aprender los fundamentos y las sintaxis básicas de la programación. 
+    \item Informática II con el lenguaje Ada me ayudó a conocer mejor la programación, a cometer menos errores y a enfrentarme a proyectos un poco más complejos. 
+    \item Protocolos para la Transmisión de Audio y Vídeo en Internet pues gracias a esta asignatura comencé con el lenguaje Python que se usa en este proyecto y que junto a Arquitectura de Internet y Sistemas Telemáticos para Medios Audiovisuales aprendí los conceptos de arquitectura de red y protocolos, así como los métodos de interconexión de redes y encaminamiento, ayudándome a utilizar los fundamentos de la programación en internet.
+    \item Construcción de Servicios y Aplicaciones Audiovisuales en Internet ya que aprendí desarrollo web del lado del cliente y que me ha servido para usar HTML, CSS y JavaScript en el proyecto.
+    \item Laboratorio de Tecnologías Audiovisuales en la Web es la asignatura que más me ha servido para poder realizar mi proyecto porque  es donde aprendí más sobre las tecnologías web para la construcción de aplicaciones y servicios.
+    Y donde adquirí los conocimientos para utilizar Django como tecnología web en el lado del servidor y los mecanismos de interacción entre cliente y servidor.
+\end{itemize}
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
+Realizar este trabajo final de grado ha sido un gran reto y un verdadero quebradero de cabeza. 
+Nunca me había enfrentado a un proyecto tan amplio y complejo partiendo de cero.
+La mayoría de prácticas del Grado han estado guiadas y esquematizadas, teniendo gran parte de la información necesaria disponible para realizarlas y obviamente han sido mucho más breves sin requerir de tanta elaboración.
+
+He aprendido, aunque tarde, ha organizar mi propio tiempo y enfrentarme a los problemas y solucionarlos.
+Durante el grado, siempre había unas fechas para realizar los exámenes y entregar trabajos que me empujaban y obligaban a esforzarme, y como durante la realización de este proyecto no tenia ninguna presión del tiempo, en cuanto me surgía cualquier problema me estancaba, lo dejaba pasar y volver a retomar el proyecto se me tornaba más complicado. 
+Pero al final conseguí compaginar el trabajo con el proyecto y aprovechar más el tiempo.
+
+Gracias a este proyecto he aprendido a elaborar una aplicación web completa, a manejar el código, las funciones, la base de datos, los archivos…para que todo tenga una estructura ordenada y enlazada. Por supuesto afianzando y ampliando todo lo aprendido en las asignaturas del Grado mencionadas en sección anterior~\ref{sec:aplicacion_aprendido}. 
+
+También a la hora de realizar la memoria he aprendido a plasmar y redactar todo el trabajo realizado y era algo que no estaba habituado a ello.
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
+
+Puesto que es una aplicación web necesitará de contante mantenimiento y, siendo mi primera, de numerosas correcciones.
+
+En cuanto a ampliar las funcionalidades de Dr.ScratchJr se podría:
+\begin{itemize}
+    \item Mejorar el análisis de los proyectos añadiendo más criterios que den mayor información.
+    \item Añadir otra función a la aplicación donde un usuario pueda ver estadísticas de todos los análisis que tenga almacenados y así tener mayor control e información.
+    \item Crear otro apartado dónde haya enunciados de ejercicios específicos para hacer proyectos de ScratchJr con distintos niveles de dificultad y dónde Dr.ScratchJr evalúe con una nota si se ha realizado correctamente en exclusiva dicho ejercicio. 
+    Un ejemplo de ejercicio sería uno donde se tenga que hacer un proyecto contando una historia en ciertos lugares, que contenga ciertos personajes y que usen mínimo ciertos bloques.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
