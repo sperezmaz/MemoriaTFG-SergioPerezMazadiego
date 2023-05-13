@@ -169,7 +169,7 @@ La idea surge con el objetivo de hacer una herramienta similar a Dr.Scratch, que
 
 \vspace{5mm}
 
-Entonces se ha creado una aplicación web llamada Dr.ScratchJr para que profesores o padres, de niños que usen ScratchJr, puedan subir sus proyectos y vean un análisis de éstos.
+Como resultado del trabajo fin de grado se ha creado una aplicación web llamada Dr.ScratchJr para que profesores o padres de niños que usen ScratchJr, puedan subir sus proyectos y vean un análisis de éstos.
 En el análisis de un proyecto se estudia la variabilidad en el uso de bloques, los malos hábitos que contiene, la creatividad y otros datos que podrían llegar a ser de interés como el total de páginas o personajes que se usan en él. 
 La aplicación web ofrece la posibilidad de analizar uno, o varios proyectos a la vez, o crear una cuenta en la aplicación para poder almacenar los análisis de proyectos y tener una gestión de sus autores. 
 En ambos casos la aplicación dispone de la opción de exportar los datos de los análisis en formato CSV.
@@ -218,15 +218,15 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 
 \cleardoublepage
 \chapter{Introducción}
-\label{chap:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{chap:intro}
+\label{chap:intro} % etiqueta para poder referenciar luego en el texto con~\ref{chap:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
 Las habilidades de programación son cada vez  más necesarias que se empiecen a trabajar en las aulas desde los inicios en la educación, igual que se enseña la lengua, las matemáticas, la historia, puesto que favorecen la estructuración del pensamiento crítico y la lógica, esenciales en la resolución de problemas.
 Difícilmente se consigue enseñar a un niño de unos 5 o 6 años a que escriba código de programación.
 Pero sí es posible que comience a familiarizarse con el mundo de la programación y su lenguaje general sin que se dé cuenta de una manera lúdica y al mismo tiempo formativa.
-Como en las primeras edades sus capacidades lectoescritoras todavía están formándose, por medio de herramientas vinculadas a elementos visuales como juegos, puzzles o aventuras, podemos arrancar el desarrollo del pensamiento computacional recurriendo a su creatividad. Algunas herramientas que podemos encontrar son las aplicaciones Kodable\footnote{\url{https://www.kodable.com/}}, Bit by bit\footnote{\url{http://rikaigames.com/bitbybit/}}, Codekarts\footnote{\url{https://civat.es/app/code-karts/}}  y ScratchJr\footnote{\url{https://www.scratchjr.org/}}. 
+Como en las primeras edades sus capacidades lectoescritoras todavía están formándose, por medio de herramientas vinculadas a elementos visuales como juegos, puzzles o aventuras, podemos arrancar el desarrollo del pensamiento computacional recurriendo a su creatividad. Algunas herramientas que podemos encontrar son las aplicaciones Kodable\footnote{\url{https://www.kodable.com/}}, Bit by bit\footnote{\url{http://rikaigames.com/bitbybit/}}, Codekarts\footnote{\url{https://civat.es/app/code-karts/}} y ScratchJr\footnote{\url{https://www.scratchjr.org/}}. 
 
-De esta última, ScratchJr (Sección~\ref{sec:scratchJr}), es donde parte este proyecto.
+De esta última, ScratchJr (que se introduce en detalle en la Sección~\ref{sec:scratchJr}), es donde parte este proyecto.
 ScratchJr está basada en Scratch pero con su interfaz y lenguaje de programación rediseñados para niños más pequeños.
 En la URJC se desarrolló la herramienta Dr.Scratch que permite a los usuarios de Scratch analizar sus proyectos y medir sus capacidades de programación cuantificadas por medidores de habilidades de pensamiento computacional.
 De esta misma idea surge Dr.ScratchJr.
@@ -282,7 +282,7 @@ Para cumplir con el objetivo principal ha sido necesario seguir los siguientes o
     \item Comprender la herramienta DrScratch.
     \item Ampliar y mejorar los conocimientos sobre la creación de aplicaciones web con Django e instalar las tecnologías necesarias para ello.
     \item Examinar la estructura de la aplicación ScratchJr: el uso y funcionamiento, los tipos de bloques y componentes que pueden emplearse y los ficheros que forman un proyecto.
-    \item Estudiar el JSON de datos que ScratchJr genera en cada proyecto.
+    \item Estudiar el fichero JSON de datos que ScratchJr genera en cada proyecto.
     \item Extraer y almacenar en una base de datos los elementos y datos de los proyectos generados por ScratchJr.
     \item Crear los algoritmos para tratar y adaptar los datos para los distintos criterios del análisis en la aplicación web.
     \item Desarrollar la aplicación web para que se adapte a diferentes dispositivos con distintas resoluciones.
@@ -308,7 +308,7 @@ Para el desarrollo del proyecto se han utilizado una serie de tecnologías ya ex
 \section{ScratchJr}
 \label{sec:scratchJr}
 
-ScratchJr~\cite{scratchjr} (figura~\ref{fig:scratchjr}) es un lenguaje de programación de iniciación que permite a los niños pequeños crear sus propias historias y juegos interactivos.
+ScratchJr~\cite{scratchjr,leidl2017programming} (figura~\ref{fig:scratchjr}) es un lenguaje de programación de iniciación que permite a los niños pequeños crear sus propias historias y juegos interactivos.
 Está inspirado en el lenguaje de programación Scratch\footnote{\url{https://scratch.mit.edu/about}} utilizado por millones de jóvenes en todo el mundo.
 ScratchJr ha rediseñado tanto la interfaz como el lenguaje de programación para adecuarlo al desarrollo de los niños más pequeños.
 
@@ -330,6 +330,10 @@ Estos no sólo aprenden a programar, sino que además desarrollan destrezas que 
 ScratchJr está disponible como una aplicación gratuita para dispositivos iOS y Android.
 Además, permite compartir los proyectos creados entre usuarios a través de correo electrónico o AirDrop.
 
+\section{Dr.Scratch}
+\label{sec:drscratch}
+
+Por hacer~\cite{moreno2015dr}
 
 \section{Python}
 \label{sec:python}
@@ -433,7 +437,7 @@ La separación permite modificar la estética de la página sin tener que modifi
 \section{JavaScript} 
 \label{sec:javascript}
 
-JavaScript (JS)~\cite{} es un lenguaje de programación interpretado, dinámico y débilmente tipado.
+JavaScript (JS)~\cite{gauchat2012gran} es un lenguaje de programación interpretado, dinámico y débilmente tipado.
 Multiparadigma ya que es orientado a objetos, utiliza programación basada en prototipos, imperativa y declarativa (funcional).
 
 \vspace{5mm}
@@ -492,7 +496,7 @@ Dispone de tres estructuras de datos diferentes:
 \vspace{5mm}
 Algunas características importantes de la herramienta:
 \begin{itemize}
-    \item Lectura y escritura de datos (CSV, Excel, SQL, JSON, Parquet…).
+    \item Lectura y escritura de datos (CSV, Excel, SQL, JSON, Parquet\ldots).
     \item Inserción y eliminación de columnas en estructuras de datos.
     \item Reestructuración y segmentación de conjuntos de datos, y manejo integrado de los datos faltantes.
     \item Facilita el manejo de series temporales: generación de rangos de fechas y conversión de frecuencias, desplazamiento de ventanas estadísticas y de regresiones lineales, desplazamiento de fechas…
@@ -540,7 +544,7 @@ En este capítulo se describe la arquitectura y cómo se ha diseñado la aplicac
 \begin{figure}[h!]
   \centering
   \includegraphics[width=16cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Arquitectura Dr.ScratchJr.}\label{fig:arquitectura}
+  \caption{Arquitectura de Dr.ScratchJr.}\label{fig:arquitectura}
 \end{figure}
 
 La arquitectura que sigue Dr.ScratchJr es la del modelo cliente-servidor.
@@ -597,7 +601,7 @@ El procedimiento que se ha seguido para obtener los datos necesarios ha sido:
 \begin{figure}[H]
   \centering
   \includegraphics[width=16cm, keepaspectratio]{img/bd_json.png}
-  \caption{Datos del JSON en la base de datos.}\label{fig:bd_json}
+  \caption{Datos de la estructura JSON en la base de datos.}\label{fig:bd_json}
 \end{figure}
 
 \newpage
@@ -779,7 +783,7 @@ En el caso de haber iniciado sesión, también existe la opción de cambiarle el
 \label{subsec:Tabla de urls con sus vistas}
 
     \begin{table}[H]
-     La tabla ~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las vistas que están asociadas a las URLs de la aplicación web Dr.ScratchJr.
+     La tabla~\ref{tabla:path-url} hace un breve resumen de la funcionalidad de las vistas que están asociadas a las URLs de la aplicación web Dr.ScratchJr.
      \begin{center}
      \begin{tabular}{ | m{3.1cm} | m{3.3cm} | m{8.8cm} | }
       \hline \textbf{Path URL} & \textbf{Vista} & \textbf{Función}\\ \hline
@@ -1209,7 +1213,7 @@ Una vez cargado el zip y opcionalmente cambiado internamente en la aplicación e
 
 \newpage
 \section{Exportar datos en CSV}
-\label{sec:Cargar zip}
+\label{sec:exportarCSV}
 
 Si se cargan varios proyectos a la vez a través de un zip o si se ha iniciado sesión y están almacenados los proyectos, Dr.ScratchJr tiene la opción de exportar los análisis de los proyectos.
 En la figura~\ref{fig:Test1_csv}, vemos como se exportan correctamente en tres ficheros CSV distintos los datos del análisis del proyecto del ejemplo anterior Test1.sjr. 
