@@ -169,14 +169,14 @@ La idea surge con el objetivo de hacer una herramienta similar a Dr.Scratch, que
 
 \vspace{5mm}
 
-Como resultado del trabajo fin de grado se ha creado una aplicación web llamada Dr.ScratchJr para que profesores o padres de niños que usen ScratchJr, puedan subir sus proyectos y vean un análisis de éstos.
+Como resultado del trabajo fin de grado se ha creado una aplicación web llamada Dr.ScratchJr para que educadores o padres de niños que usen ScratchJr, puedan subir sus proyectos y vean un análisis de éstos.
 En el análisis de un proyecto se estudia la variabilidad en el uso de bloques, los malos hábitos que contiene, la creatividad y otros datos que podrían llegar a ser de interés como el total de páginas o personajes que se usan en él. 
 La aplicación web ofrece la posibilidad de analizar uno, o varios proyectos a la vez, o crear una cuenta en la aplicación para poder almacenar los análisis de proyectos y tener una gestión de sus autores. 
 En ambos casos la aplicación dispone de la opción de exportar los datos de los análisis en formato CSV.
 
 \vspace{5mm}
 
-Las tecnologías que se han empleado son en el lado del servidor el software de desarrollo Django en el que se utiliza Python, y Bootstrap en el lado del cliente en el que se utiliza HTML, CSS y JavaScript.
+Las tecnologías que se han empleado son: en el lado del servidor, el software de desarrollo Django en el que se utiliza Python, y Bootstrap en el lado del cliente en el que se utiliza HTML, CSS y JavaScript.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -185,9 +185,18 @@ Las tecnologías que se han empleado son en el lado del servidor el software de 
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+This final degree project consists on the development of a tool that analyzes ScratchJr projects, which is a programming language designed for children from 5 to 7 years old.
+The idea arises with the objective of making a tool similar to Dr.Scratch, which is a web application that analyzes Scratch projects, another programming initiation language.
+
+\vspace{5mm}
+
+As a result of this final degree project, a web application called Dr.ScratchJr has been created so that educators or parents of children who use ScratchJr can upload their projects and see an analysis of them.
+This análisis includes the study of the variability in the use of blocks, the bad habits it contains, creativity and other interesting data such as the total number of pages or characters used in the project.
+The web application provides the option to analyze one or multiple projects simultaneously, and creating an account in the application that allows to store the analyses of the projects and manage their authors. In both cases, the application has the option of exporting the analysis data in CSV format.
+
+\vspace{5mm}
+
+The technologies that have been used are: on the server side, the Django development software utilizing Python, and on the client side, Bootstrap utilizing HTML, CSS, and JavaScript.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,17 +230,17 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \label{chap:intro} % etiqueta para poder referenciar luego en el texto con~\ref{chap:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-Las habilidades de programación son cada vez  más necesarias que se empiecen a trabajar en las aulas desde los inicios en la educación, igual que se enseña la lengua, las matemáticas, la historia, puesto que favorecen la estructuración del pensamiento crítico y la lógica, esenciales en la resolución de problemas.
+Las habilidades de programación son cada vez  más necesarias que se empiecen a trabajar en las aulas desde los inicios en la educación, igual que se enseña la lengua, las matemáticas o la historia, puesto que favorecen la estructuración del pensamiento crítico y la lógica, esenciales en la resolución de problemas.
 Difícilmente se consigue enseñar a un niño de unos 5 o 6 años a que escriba código de programación.
-Pero sí es posible que comience a familiarizarse con el mundo de la programación y su lenguaje general sin que se dé cuenta de una manera lúdica y al mismo tiempo formativa.
+Pero sí es posible que comience a familiarizarse con el mundo de la programación sin que se dé cuenta, de una manera lúdica y al mismo tiempo formativa.
 Como en las primeras edades sus capacidades lectoescritoras todavía están formándose, por medio de herramientas vinculadas a elementos visuales como juegos, puzzles o aventuras, podemos arrancar el desarrollo del pensamiento computacional recurriendo a su creatividad. Algunas herramientas que podemos encontrar son las aplicaciones Kodable\footnote{\url{https://www.kodable.com/}}, Bit by bit\footnote{\url{http://rikaigames.com/bitbybit/}}, Codekarts\footnote{\url{https://civat.es/app/code-karts/}} y ScratchJr\footnote{\url{https://www.scratchjr.org/}}. 
 
 De esta última, ScratchJr (que se introduce en detalle en la Sección~\ref{sec:scratchJr}), es donde parte este proyecto.
 ScratchJr está basada en Scratch pero con su interfaz y lenguaje de programación rediseñados para niños más pequeños.
 En la URJC se desarrolló la herramienta Dr.Scratch que permite a los usuarios de Scratch analizar sus proyectos y medir sus capacidades de programación cuantificadas por medidores de habilidades de pensamiento computacional.
 De esta misma idea surge Dr.ScratchJr.
-Pero debido a que los usuarios de ScratchJr, al ser demasiado pequeños, no tienen todavía la capacidad de poder autoevaluar sus propios proyectos, el objetivo principal de la herramienta Dr.ScratchJr es facilitar a los profesores el proceso de enseñanza de sus alumnos.
-Con ella, los profesores pueden analizar los proyectos que hayan hecho sus alumnos en ScratchJr.
+Pero debido a que los usuarios de ScratchJr, al ser demasiado pequeños, no tienen todavía la capacidad de poder autoevaluar sus propios proyectos, el objetivo principal de la herramienta Dr.ScratchJr es facilitar a los profesores e investigadores el proceso de enseñanza de sus alumnos o hijos.
+Con ella, estos pueden analizar los proyectos que hayan hecho sus alumnos o hijos en ScratchJr.
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
@@ -314,7 +323,7 @@ ScratchJr ha rediseñado tanto la interfaz como el lenguaje de programación par
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=8cm, keepaspectratio]{img/scratchjr.png}
+  \includegraphics[width=13cm, keepaspectratio]{img/scratchjr.png}
   \caption{Aplicación ScratchJr.}\label{fig:scratchjr}
 \end{figure}
 
@@ -330,10 +339,22 @@ Estos no sólo aprenden a programar, sino que además desarrollan destrezas que 
 ScratchJr está disponible como una aplicación gratuita para dispositivos iOS y Android.
 Además, permite compartir los proyectos creados entre usuarios a través de correo electrónico o AirDrop.
 
+
 \section{Dr.Scratch}
 \label{sec:drscratch}
 
-Por hacer~\cite{moreno2015dr}
+Dr.Scratch\footnote{\url{http://drscratch.org/}}~\cite{moreno2015dr} es una aplicación web gratuita de código abierto que permite, a educadores, alumnos o interesados en aprender programación, analizar automáticamente proyectos Scratch.
+
+\vspace{5mm}
+
+Utiliza la librería \texttt{Hairball}\footnote{\url{https://pypi.org/project/hairball/}} para evaluar proyectos de Scratch y ofrecer una puntuación basada en el pensamiento computacional. 
+Para ello, Dr.Scratch tiene en cuenta los siguientes siete aspectos: abstracción, pensamiento lógico, sincronización, paralelismo, control de flujo, interactividad con el usuario y representación de datos. 
+Además de la puntuación, ofrece retroalimentación para mejorar su código en dichos aspectos y, dependiendo de la puntuación, muestra algunos malos hábitos de programación como el nombramiento inadecuado de personajes, repetición de código, código que nunca se ejecuta y la inicialización incorrecta de los atributos del objeto.
+
+\vspace{5mm}
+
+Para analizar un proyecto, Dr.Scratch permite cargar un archivo .sb o un .sb2, ya que la herramienta es compatible con las versiones 1.4 y 2.0 de Scratch, o directamente introduciendo la URL del proyecto.
+
 
 \section{Python}
 \label{sec:python}
@@ -448,7 +469,7 @@ Generalmente es usado en lado del cliente en las aplicaciones web, pero también
 Integrado dentro del motor de los navegadores web más populares, favoreciendo la rápida ejecución de su sintaxis.
 Se relaciona de modo fluido y transparente con HTML y CSS, ofreciendo más dinamismo a las páginas web.
 
-
+\newpage
 \section{Bootstrap} 
 \label{sec:bootstrap}
 
@@ -472,7 +493,7 @@ Las filas deben colocarse dentro de un contenedor para una alineación y un rell
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=8cm, keepaspectratio]{img/bootstrap.png}
+  \includegraphics[width=9cm, keepaspectratio]{img/bootstrap.png}
   \caption{Bootstrap.}\label{fig:bootstrap}
 \end{figure}
 
@@ -484,7 +505,6 @@ Pandas~\cite{pandas} es una biblioteca construida sobre el lenguaje de programac
 Es una herramienta de código abierto, rápida, potente, flexible y fácil de usar.
 Proporciona estructuras de datos y herramientas de análisis de datos de alto rendimiento.
 
-\vspace{5mm}
 Dispone de tres estructuras de datos diferentes:
 \begin{itemize}
     \item \textbf{Series: } estructura de una dimensión cuyos elementos tienen que ser del mismo tipo.
@@ -494,7 +514,7 @@ Dispone de tres estructuras de datos diferentes:
 \end{itemize}
 
 \vspace{5mm}
-Algunas características importantes de la herramienta:
+Algunas características importantes de esta biblioteca son:
 \begin{itemize}
     \item Lectura y escritura de datos (CSV, Excel, SQL, JSON, Parquet\ldots).
     \item Inserción y eliminación de columnas en estructuras de datos.
@@ -502,6 +522,18 @@ Algunas características importantes de la herramienta:
     \item Facilita el manejo de series temporales: generación de rangos de fechas y conversión de frecuencias, desplazamiento de ventanas estadísticas y de regresiones lineales, desplazamiento de fechas…
     \item Hace más amigable el uso de NumPy (software de análisis numérico).
 \end{itemize}
+
+\newpage
+\section{Gettext} 
+\label{sec:gettext}
+
+El módulo gettext~\cite{Gettext} de Python proporciona una implementación compatible con la biblioteca original gettext de GNU\footnote{\url{https://www.gnu.org/software/gettext/}}. 
+Es utilizado para proporcionar servicios de internacionalización (I18N) y localización (L10N) para módulos y aplicaciones Python como Django (incluido en django.utils.translation), mediante la traducción de cadenas de texto.
+Proporciona herramientas para extraer, traducir y generar archivos de catálogo de mensajes (.mo) a partir de archivos de plantillas (.po).
+
+\vspace{5mm}
+Separa la programación de la traducción. 
+De esa manera, la extracción de mensajes, su traducción y su reintegración con el código es mucho más fácil y menos propensa a errores.
 
 \section{Visual Studio Code} 
 \label{sec:visual-studio-code}
@@ -523,7 +555,7 @@ Además, contiene soporte para la depuración, resaltado de sintaxis, recomendac
 \begin{figure}[ht]
   \centering
   \includegraphics[width=16cm, keepaspectratio]{img/visualstudiocode.png}
-  \caption{Visual Studio Code.}\label{fig:visualstudiocode}
+  \caption{Captura de pantalla del código de Dr.ScratchJr en Visual Studio Code.}\label{fig:visualstudiocode}
 \end{figure}
 
 
@@ -536,7 +568,7 @@ Además, contiene soporte para la depuración, resaltado de sintaxis, recomendac
 \chapter{Diseño e implementación}
 \label{chap:implementacion}
 
-En este capítulo se describe la arquitectura y cómo se ha diseñado la aplicación Dr.ScratchJr.
+En este capítulo se describe la arquitectura y cómo se ha diseñado e implementado la aplicación Dr.ScratchJr.
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
@@ -548,7 +580,7 @@ En este capítulo se describe la arquitectura y cómo se ha diseñado la aplicac
 \end{figure}
 
 La arquitectura que sigue Dr.ScratchJr es la del modelo cliente-servidor.
-El usuario a través del navegador web se conecta a la aplicación web Dr.ScrtachJr.
+El usuario, a través del navegador web, se conecta a la aplicación web Dr.ScrtachJr.
 Subirá uno o varios proyectos mediante los formularios que dispone. 
 El navegador manda una petición HTTP con una URL que es interpretada por el mapa de URLS (URLmap o URLconf) para encontrar la vista apropiada.
 La vista (\emph{View}) valida los datos de los formularios, estructura esos datos e interactúa con el modelo para almacenar y obtener datos.
@@ -677,9 +709,9 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
     \item Para el criterio \emph{Creatividad} se busca si el usuario ha generado nuevo contenido respecto al contenido que proporciona la aplicación ScratchJr.
 
     \vspace{5mm}
-    El propio programa de ScratchJr aplica el algoritmo MD5 a sus archivos multimedia que tiene por defecto para saber si han sido modificadas.
+    El propio programa de ScratchJr aplica el algoritmo MD5 a sus archivos multimedia que tiene por defecto para saber si han sido modificados.
     Los archivos que han sido modificados por el usuario son nombrados con 32 dígitos hexadecimales.
-    Entonces el algoritmo de Dr.ScratchJr considera imágenes editadas o grabaciones de audio, aquellos cuyos archivos tienen un nombre con una longitud mayor a 30 caracteres.
+    Entonces el algoritmo de Dr.ScratchJr considera imágenes editadas o grabaciones de audio, a aquellas cuyos archivos tienen un nombre con una longitud mayor a 30 caracteres.
     Estos datos modificados se almacenan en los siguientes diccionarios.
      \begin{itemize}
         \item \emph{edited\_pages:} (páginas editadas) es un diccionario en el que se almacenan como claves las páginas que tienen una imagen de fondo editada y como valores los nombres de las imágenes de fondo.
@@ -726,7 +758,7 @@ Para realizar dicho análisis se han llevado a cabo los siguientes criterios: Va
 
 % Algoritmo: proceso final
 
-Una vez el algoritmo ha abstraído los datos para su análisis, se almacenan y se introducen en diccionarios que se utilizan como contexto para representar (renderizar) las plantillas que muestran los resultados del análisis.
+Una vez el algoritmo ha extraído los datos para su análisis, se almacenan y se introducen en diccionarios que se utilizan como contexto para representar (renderizar) las plantillas que muestran los resultados del análisis.
 Estos diccionarios se almacenan igualmente en base de datos (figura~\ref{fig:bd_analisis}) de manera temporal para posteriormente utilizarlos también para renderizar las plantillas que muestran los detalles de un tipo de análisis en concreto.
 
 \newpage
@@ -739,7 +771,7 @@ Estos diccionarios se almacenan igualmente en base de datos (figura~\ref{fig:bd_
 El proceso para el análisis de múltiples proyectos es el mismo salvo que en lugar de representarse primero la plantilla del análisis de un proyecto, se renderiza una plantilla con un listado de los proyectos subidos junto al estudiante asociado a ese proyecto (figura~\ref{fig:listado_zip}).
 A partir de ese listado se puede ver el análisis de cada proyecto individualmente.
 
-\vspace{4mm}
+\vspace{3mm}
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm, keepaspectratio]{img/listado_zip.png}
@@ -749,11 +781,11 @@ A partir de ese listado se puede ver el análisis de cada proyecto individualmen
 En cualquier listado con proyectos en la aplicación web Dr.ScratchJr existe la posibilidad de exportar los datos del análisis de los proyectos. 
 Al exportar se genera un zip, los datos se almacenan en tres ficheros CSV (badhabits-1, otherdata-1, variability-1) y en una hoja de cálculo de Microsoft Excel llamada data.xlsx con los mismos datos de los tres ficheros CSV, pero agrupados en pestañas en un solo documento.
 
-\vspace{5mm}
-Dr.ScratchJr dispone de la opción de cambiar a su pagina web el idioma a español o a inglés gracias al módulo gettext, disponible en Django, y creando los archivos de traducción para cada uno de los lenguajes.
+\vspace{4mm}
+Dr.ScratchJr dispone de la opción de cambiar a su pagina web el idioma a español o a inglés gracias al módulo \texttt{gettext} (sección~\ref{sec:gettext}), disponible en Django. Para ello, se han extraído las cadenas de texto y se han traducido en los archivos de traducción .po que hay para cada uno de los lenguajes. 
 
-\section{Página web}
-\label{sec:pagina-web}
+\section{Aplicación web}
+\label{sec:aplicacion-web}
 
 Al acceder a la aplicación web sin estar identificado desde un ordenador se muestran dos cuadros donde el usuario puede introducir uno o varios proyectos a la vez para que sean analizados, una breve presentación donde sugiere que el usuario se registre para poder almacenar los análisis que suba a la herramienta y un panel lateral en el lado izquierdo para ayudar al usuario.
 
@@ -1111,9 +1143,10 @@ Al igual ocurre con cuatro de los cinco personajes que tiene el proyecto, que so
 
 En la figura~\ref{fig:otros_datos_Test1} confirmamos estos datos con los mostrados en el análisis de Dr.ScratchJr.
 
+\vspace{5mm}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=14cm, keepaspectratio]{img/otros_datos_Test1.png}
+  \includegraphics[width=15cm, keepaspectratio]{img/otros_datos_Test1.png}
   \caption{Otros datos del analisis de Test1.sjr.}
   \label{fig:otros_datos_Test1}
 \end{figure}
@@ -1251,19 +1284,19 @@ Aunque también se exportan estos mismos datos en un archivo Excel dividido en p
 
 Los objetivos de este trabajo final de grado se han cumplido. 
 Se ha creado una herramienta dónde se analizan proyectos de ScratchJr. 
-Profesores o padres pueden subir a la aplicación web uno o varios proyectos simultáneamente de sus alumnos o hijos, ver el análisis de cada uno, almacenar y/o exportar los datos de los análisis.
+Profesores o padres investigadores pueden subir a la aplicación web uno o varios proyectos simultáneamente de sus alumnos o hijos, ver el análisis de cada uno, almacenar y/o exportar los datos de los análisis.
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion_aprendido}
 
-La mayoría de asignaturas que he cursado durante el Grado En Ingeniería En Sistemas Audiovisuales y Multimedia me han ayudado para la realización de este trabajo, puesto que me han ido formando en diversos aspectos, pero destacan:
+La mayoría de asignaturas que he cursado durante el Grado en Ingeniería en Sistemas Audiovisuales y Multimedia me han ayudado para la realización de este trabajo, puesto que me han ido formando en diversos aspectos, pero destacan:
 
 \begin{itemize}
     \item Expresión Oral y Escrita y Búsqueda de Información porque me ha ayudado a redactar, buscar información y desarrollar la memoria.
-    \item Informática I donde gracias al lenguaje de introducción a la programación ``Picky'' comencé a programar y aprender los fundamentos y las sintaxis básicas de la programación. 
-    \item Informática II con el lenguaje Ada me ayudó a conocer mejor la programación, a cometer menos errores y a enfrentarme a proyectos un poco más complejos. 
-    \item Protocolos para la Transmisión de Audio y Vídeo en Internet pues gracias a esta asignatura comencé con el lenguaje Python que se usa en este proyecto y que junto a Arquitectura de Internet y Sistemas Telemáticos para Medios Audiovisuales aprendí los conceptos de arquitectura de red y protocolos, así como los métodos de interconexión de redes y encaminamiento, ayudándome a utilizar los fundamentos de la programación en internet.
-    \item Construcción de Servicios y Aplicaciones Audiovisuales en Internet ya que aprendí desarrollo web del lado del cliente y que me ha servido para usar HTML, CSS y JavaScript en el proyecto.
+    \item Informática I, donde gracias al lenguaje de introducción a la programación ``Picky'' comencé a programar y aprender los fundamentos y las sintaxis básicas de la programación. 
+    \item Informática II me ayudó a conocer mejor la programación con el lenguaje Ada, a cometer menos errores y a enfrentarme a proyectos un poco más complejos. 
+    \item Protocolos para la Transmisión de Audio y Vídeo en Internet, pues gracias a esta asignatura comencé con el lenguaje Python que se usa en este proyecto y que, junto a Arquitectura de Internet y Sistemas Telemáticos para Medios Audiovisuales, aprendí los conceptos de arquitectura de red y protocolos, así como los métodos de interconexión de redes y encaminamiento, ayudándome a utilizar los fundamentos de la programación en internet.
+    \item Construcción de Servicios y Aplicaciones Audiovisuales en Internet, ya que aprendí desarrollo web del lado del cliente y que me ha servido para usar HTML, CSS y JavaScript en el proyecto.
     \item Laboratorio de Tecnologías Audiovisuales en la Web es la asignatura que más me ha servido para poder realizar mi proyecto porque  es donde aprendí más sobre las tecnologías web para la construcción de aplicaciones y servicios.
     Y donde adquirí los conocimientos para utilizar Django como tecnología web en el lado del servidor y los mecanismos de interacción entre cliente y servidor.
 \end{itemize}
