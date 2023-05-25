@@ -191,7 +191,7 @@ The idea arises with the objective of making a tool similar to Dr.Scratch, which
 \vspace{5mm}
 
 As a result of this final degree project, a web application called Dr.ScratchJr has been created so that educators, investigators or parents can upload projects of children using ScratchJr and see an analysis of them.
-This análisis includes the study of the variability in the use of blocks, the bad habits it contains, creativity and other interesting data such as the total number of pages or characters used in the project.
+This análisis includes the study of the variability in the use of blocks, the bad habits it contains, the creativity and other interesting data such as the total number of pages or characters used in the project.
 The web application provides the option to analyze one or multiple projects simultaneously, and creating an account in the application that allows to store the analyses of the projects and manage their authors. In both cases, the application has the option of exporting the analysis data in CSV format.
 
 \vspace{5mm}
@@ -239,7 +239,7 @@ De esta última, ScratchJr (que se introduce en detalle en la Sección~\ref{sec:
 ScratchJr está basada en Scratch pero con su interfaz y lenguaje de programación rediseñados para niños más pequeños.
 En la URJC se desarrolló la herramienta Dr.Scratch que permite a los usuarios de Scratch analizar sus proyectos y medir sus capacidades de programación cuantificadas por medidores de habilidades de pensamiento computacional.
 De esta misma idea surge Dr.ScratchJr.
-Pero debido a que los usuarios de ScratchJr, al ser demasiado pequeños, no tienen todavía la capacidad de poder autoevaluar sus propios proyectos, el objetivo principal de la herramienta Dr.ScratchJr es facilitar a los profesores o padres el proceso de enseñanza de sus alumnos o hijos. 
+Pero debido a que los usuarios de ScratchJr, al ser demasiado pequeños, no tienen todavía la capacidad de poder auto-evaluar sus propios proyectos, el objetivo principal de la herramienta Dr.ScratchJr es facilitar a los profesores o padres el proceso de enseñanza de sus alumnos o hijos. 
 Con ella, estos o investigadores pueden analizar los proyectos que hayan hecho niños en ScratchJr y valorar el desarrollo de pensamiento computacional.
 
 \section{Estructura de la memoria}
@@ -288,7 +288,7 @@ De esta manera se facilita y agiliza el trabajo de evaluación y poder guiar a l
 Para cumplir con el objetivo principal ha sido necesario seguir los siguientes objetivos específicos:
 
 \begin{itemize}
-    \item Comprender la herramienta DrScratch.
+    \item Comprender la herramienta Dr.Scratch.
     \item Ampliar y mejorar los conocimientos sobre la creación de aplicaciones web con Django e instalar las tecnologías necesarias para ello.
     \item Examinar la estructura de la aplicación ScratchJr: el uso y funcionamiento, los tipos de bloques y componentes que pueden emplearse y los ficheros que forman un proyecto.
     \item Estudiar el fichero JSON de datos que ScratchJr genera en cada proyecto.
@@ -778,7 +778,7 @@ A partir de ese listado se puede ver el análisis de cada proyecto individualmen
   \caption{Ejemplo de un listado del análisis de un zip.}\label{fig:listado_zip}
 \end{figure}
 
-En cualquier listado con proyectos en la aplicación web Dr.ScratchJr existe la posibilidad de exportar los datos del análisis de los proyectos. 
+En cualquier listado con proyectos en la aplicación web Dr.ScratchJr existe, gracias a la biblioteca Pandas (sección~\ref{sec:gettext}), la posibilidad de exportar los datos del análisis de los proyectos. 
 Al exportar se genera un zip, los datos se almacenan en tres ficheros CSV (badhabits-1, otherdata-1, variability-1) y en una hoja de cálculo de Microsoft Excel llamada data.xlsx con los mismos datos de los tres ficheros CSV, pero agrupados en pestañas en un solo documento.
 
 \vspace{4mm}
@@ -790,7 +790,7 @@ Dr.ScratchJr dispone de la opción de cambiar a su pagina web el idioma a españ
 Al acceder a la aplicación web sin estar identificado desde un ordenador se muestran dos cuadros donde el usuario puede introducir uno o varios proyectos a la vez para que sean analizados, una breve presentación donde sugiere que el usuario se registre para poder almacenar los análisis que suba a la herramienta y un panel lateral en el lado izquierdo para ayudar al usuario.
 
 El primer cuadro sirve para cargar un proyecto de ScratchJr, con extensión .sjr, a fin de visualizar su análisis al instante.
-En el caso de que se esté registrado en Dr.ScratchJr aparecerá también un recuadro donde podrás asociar dicho proyecto con su autor, si este ya existe, o crear uno nuevo, y poder almacenar su análisis para posteriores visualizaciones.
+En el caso de que se esté registrado en Dr.ScratchJr aparecerá también un recuadro donde se podrá asociar dicho proyecto con su autor, si este ya existe, o crear uno nuevo, y poder almacenar su análisis para posteriores visualizaciones.
 
 El segundo cuadro da la posibilidad de cargar varios proyectos de una sola vez.
 Para ello, es necesario haber almacenado previamente los proyectos con extensión .sjr en un archivo comprimido .zip. Y es este archivo comprimido el que hay que cargar en este cuadro.
